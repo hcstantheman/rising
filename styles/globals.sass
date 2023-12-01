@@ -1,0 +1,40 @@
+*
+*::before
+*::after
+  box-sizing: border-box
+
+body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, dl, dd, ul, ol, li, hr
+  margin: 0
+  padding: 0
+
+ul[class]
+ol[class]
+  list-style: none
+  padding: 0
+
+a:not([class])
+  text-decoration-skip-ink: auto
+
+img
+  max-width: 100%
+  height: auto
+  display: block
+
+input, button, textarea, select
+  font: inherit
+
+@media (prefers-reduced-motion: reduce)
+  *, *::before, *::after
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+    scroll-behavior: auto !important
+
+body
+  line-height: 1.5
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
+  font-family: Arial, sans-serif
+  background-color: #fff
+  color: #333
