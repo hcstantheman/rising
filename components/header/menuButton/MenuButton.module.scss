@@ -1,0 +1,37 @@
+.menuButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+  background-color: #FFFFFF;
+}
+.barContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 4px;
+
+}
+
+.bar {
+  background-color: #5EAED2;
+  height: 5px;
+  width: 36px;
+  margin: 3px 0;
+}
+
+.middleBar {
+  width: 24px;
+}
+
+.menuText {
+  font-family: 'Corporate Logo ver3', sans-serif;
+  color: #5EAED2;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.8px;
+}

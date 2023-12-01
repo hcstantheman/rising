@@ -1,0 +1,19 @@
+.header {
+  background-image: url('../../public/img/header-background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 342px;
+  .logoIconContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px 40px 110px;
+    border: 1px solid red;
+    .logo{
+      width: 320px;
+      height: 54px;
+    }
+
+  }
+}
