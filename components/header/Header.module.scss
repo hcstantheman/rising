@@ -8,12 +8,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 100px 40px 110px;
-    border: 1px solid red;
+    padding: 40px 100px 40px 90px;
     .logo{
       width: 320px;
-      height: 54px;
+      height: auto;
     }
-
+  }
+  .dynamicText{
+    display: flex;
+    align-items: start;
+    padding-left: 90px;
+    color: #72827E;
+    text-align: center;
+    font-family: Corporate Logo ver3, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 8px;
   }
 }
