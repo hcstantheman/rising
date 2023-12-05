@@ -5,9 +5,9 @@ import Footer from '../components/footer/Footer';
 const Home: React.FC = () => {
   return (
     <div>
-      <Header text='dllm' />
+      <Header text='none' />
       <main>
-        <h1>Welcome to My Next.js Page</h1>
+
       </main>
       <Footer />
     </div>
