@@ -1,3 +1,18 @@
+.word{
+    font-weight: 500;
+    color: #000;
+    font-family: YuGothic, serif;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+.boldWord{
+    @extend .word;
+    font-family: YuGothicBold, serif;
+    font-weight: 1200;
+}
+
 .footer{
     width:100%;
     height:520px;
@@ -10,29 +25,73 @@
 }
 .footerContainer{
     padding: 96px 72px 56px 90px;
-    border: solid 1px red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .logoAddressContainer{
-    padding-top: 48px;
+    width: 100%;
+    .icon{
+        margin-top: 48px;
+    }
     .addressContainer{
         padding-top: 79px;
+
         .name{
-            color: #000;
-            font-family: YuGothic, serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 0.8px;
+            @extend .boldWord;
         }
         .address{
-            color: #000;
-            font-family: YuGothic, serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-            letter-spacing: 0.8px;
+            @extend .word;
         }
     }
+}
+.columnsContainer{
+    border: 1px solid red;
+    margin-left: 61px;
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 40px;
+    .firstColumn{
+        width: 314px;
+    }
+    .secondColumn{
+        width: 233px;
+    }
+    .thirdColumn{
+        width: 245px;
+    }
+    .title{
+        @extend .boldWord;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+        list-style-type: none;
+        .item{
+            @extend .word;
+        }
+    }
+    .secondTitle{
+        @extend .title;
+        margin-top: 24px;
+    }
+}
+
+.doubleList {
+    list-style-type: none;
+    column-count: 2;
+    column-gap: 32px;
+    margin-top: 16px;
+    padding: 0;
+    li{
+        @extend .word;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    li:last-child {
+        margin-bottom: 0;
+    }
+
 }
