@@ -46,6 +46,16 @@
             border-radius: 20px;
             position: relative;
             z-index: 0;
+            .bubbleText {
+                z-index: 100;
+                color: #FFF;
+                font-family: Corporate Logo ver3, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: bold;
+                line-height: normal;
+                letter-spacing: 1px;
+            }
         }
 
         .bubbleWrapper::before {
@@ -61,16 +71,7 @@
             z-index: -1; /* Ensures it's behind the text */
         }
 
-        .bubbleText {
-            z-index: 100;
-            color: #FFF;
-            font-family: CorporateLogoVer3, sans-serif;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            letter-spacing: 1px;
-        }
+
 
         .additionalText{
             max-width: 510px;
