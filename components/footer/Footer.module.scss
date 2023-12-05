@@ -1,5 +1,5 @@
 .word{
-    font-weight: 500;
+    font-weight: normal;
     color: #000;
     font-family: YuGothic, serif;
     font-size: 16px;
@@ -10,7 +10,7 @@
 .boldWord{
     @extend .word;
     font-family: YuGothicBold, serif;
-    font-weight: 1200;
+    font-weight: bold;
 }
 
 .footer{
@@ -24,7 +24,7 @@
     );
 }
 .footerContainer{
-    padding: 96px 72px 56px 90px;
+    padding: 96px 72px 56px 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,11 +42,13 @@
         }
         .address{
             @extend .word;
+            .underline{
+                text-decoration: underline;
+            }
         }
     }
 }
 .columnsContainer{
-    border: 1px solid red;
     margin-left: 61px;
     display: inline-flex;
     justify-content: space-between;
@@ -69,7 +71,7 @@
         gap: 8px;
         margin-top: 16px;
         list-style-type: none;
-        .item{
+        li{
             @extend .word;
         }
     }
@@ -87,11 +89,14 @@
     padding: 0;
     li{
         @extend .word;
-        gap: 16px;
-        margin-bottom: 16px;
+        margin-bottom: 8px;
     }
     li:last-child {
         margin-bottom: 0;
     }
-
+}
+.copyright{
+    text-align: center;
+    @extend .word;
+    font-size: 14px;
 }

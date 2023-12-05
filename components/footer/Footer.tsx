@@ -16,7 +16,7 @@ const Footer = () => {
           />
           <div className={styles.addressContainer}>
             <div className={styles.name}>株式会社ライジングホールディングス</div>
-            <div className={styles.address}>電話番号083-974-5020</div>
+            <div className={styles.address}>電話番号<span className={styles.underline}>083-974-5020</span></div>
             <div className={styles.address}>FAX番号083-974-5021</div>
             <div className={styles.address}>住所〒754-0002 山口県山口市小郡下郷842-9</div>
           </div>
@@ -70,7 +70,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+
       </div>
+      <p className={styles.copyright}>©株式会社ライジングホールディングス</p>
     </div>
   )}
 
