@@ -1,0 +1,22 @@
+.title{
+    margin-bottom: 18px;
+    color: #5D6865;
+    font-family: YuGothic;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.6px;
+}
+.iconsContainer{
+    margin-top:32px;
+    .firstRow, .secondRow{
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap into the next line */
+        justify-content: flex-start;
+    }
+    .secondRow{
+        margin-top: 32px;
+    }
+
+}
