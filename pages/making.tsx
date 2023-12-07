@@ -4,6 +4,7 @@ import Footer from '../components/footer/Footer';
 import styles from './css/making.module.scss';
 import MakingRowOne from "../components/making/MakingRowOne";
 import MakingRowTwo from "../components/making/MakingRowTwo";
+import MakingRowThree from "../components/making/MakingRowThree";
 
 const Home: React.FC = () => {
   return (
@@ -20,6 +21,9 @@ const Home: React.FC = () => {
             <MakingRowOne/>
             <div className={styles.secondRow}>
               <MakingRowTwo/>
+            </div>
+            <div className={styles.thirdRow}>
+              <MakingRowThree/>
             </div>
           </div>
         </div>
