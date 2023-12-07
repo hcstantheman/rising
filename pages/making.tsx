@@ -6,7 +6,7 @@ import MakingRowOne from "../components/making/MakingRowOne";
 import MakingRowTwo from "../components/making/MakingRowTwo";
 import MakingRowThree from "../components/making/MakingRowThree";
 
-const Home: React.FC = () => {
+const Making: React.FC = () => {
   return (
     <div>
       <Header text='ライジンググループのお店作り' />
@@ -32,4 +32,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Making;
