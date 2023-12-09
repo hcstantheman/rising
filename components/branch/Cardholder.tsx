@@ -1,21 +1,11 @@
 import React from 'react';
 import styles from './css/cardholder.module.scss';
 import DottedLine from "../common/DottedLine";
+import ContentProps from "../../type/ContentProps";
 
 interface ImageInfoProps {
   imageUrl?: string; // imageUrl is now optional
-  content: contentProps;
-}
-interface contentProps {
-  name: string;
-  postcode: string;
-  address: string;
-  weekdayLabel: string;
-  weekdayHour: string;
-  weekendLabel: string;
-  weekendHour: string;
-  restDay: string;
-  iconsToDisplay: string[];
+  content: ContentProps;
 }
 type IconMapping = { [key: string]: string };
 const iconMapping: IconMapping = {
@@ -35,7 +25,7 @@ const Cardholder:  React.FC<ImageInfoProps> = ({ imageUrl, content}) => {
   return (
     <div className={styles.cardholderContainer}>
       { imageUrl ?
-        <img src={imageUrl} alt="Image" className="image" /> :
+        <img src={imageUrl} alt="Image" className={styles.image} /> :
         <div className={styles.defaultImage}></div>
       }
       <div className={styles.infoContainer}>
@@ -54,18 +44,18 @@ const Cardholder:  React.FC<ImageInfoProps> = ({ imageUrl, content}) => {
           <div className={styles.businessLabel}>営業時間</div>
           <div className={styles.businessHours}>
             <div className={styles.businessRow}>
-              <span className={styles.dayLabel}>月～金</span>
-              <span>9:00 ～ 18:30</span>
+              <span className={styles.dayLabel}>{content.weekdayLabel}</span>
+              <span>{content.weekdayHour}</span>
             </div>
             <div className={styles.businessRow}>
-              <span className={styles.dayLabel}>土</span>
-              <span>9:00 ～ 13:00</span>
+              <span className={styles.dayLabel}>{content.weekendLabel}</span>
+              <span>{content.weekendHour}</span>
             </div>
           </div>
         </div>
         <div className={styles.restContainer}>
           <div className={styles.restLabel}>休業日</div>
-          <p>日曜日・祝日</p>
+          <p>{content.restDay}</p>
         </div>
         <div className={styles.iconsContainer}>
           {content.iconsToDisplay.map(iconLabel => (

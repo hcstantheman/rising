@@ -1,3 +1,10 @@
 .legend{
     margin: 104px 0 188px 192px;
 }
+.cardholderContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    gap: 56px 48px; /* 56px vertical gap, 48px horizontal gap */
+    margin: 0 auto; /* Margin on all sides */
+    max-width: 1252px;
+}
