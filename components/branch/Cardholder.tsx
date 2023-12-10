@@ -2,31 +2,36 @@ import React from 'react';
 import styles from './css/cardholder.module.scss';
 import DottedLine from "../common/DottedLine";
 import ContentProps from "../../type/ContentProps";
+import Image from 'next/image'
+
 
 interface ImageInfoProps {
-  imageUrl?: string; // imageUrl is now optional
+  imageUrl?: string;
   content: ContentProps;
 }
 type IconMapping = { [key: string]: string };
 const iconMapping: IconMapping = {
-  '車椅子': 'img/wheelchair.png',
-  'クレジットカード': 'img/creditCard.png',
-  '在宅': 'img/home.png',
-  '血圧計': 'img/heart.png',
-  '相談': 'img/hand.png',
-  '宅配': 'img/truck.png',
-  '駐車場': 'img/parking.png',
-  'トイレ': 'img/toilet.png',
-  '多目的': 'img/multi.png',
-  'ゲネリック': 'img/pills.png'
+  '車椅子': '/img/wheelchair.png',
+  'クレジットカード': '/img/creditCard.png',
+  '在宅': '/img/home.png',
+  '血圧計': '/img/heart.png',
+  '相談': '/img/hand.png',
+  '宅配': '/img/truck.png',
+  '駐車場': '/img/parking.png',
+  'トイレ': '/img/toilet.png',
+  '多目的': '/img/multi.png',
+  'ゲネリック': '/img/pills.png'
 };
 
 const Cardholder:  React.FC<ImageInfoProps> = ({ imageUrl, content}) => {
   return (
     <div className={styles.cardholderContainer}>
       { imageUrl ?
-        <img src={imageUrl} alt="Image" className={styles.image} /> :
-        <div className={styles.defaultImage}></div>
+        <Image
+          src={imageUrl} alt="Image" className={styles.image}
+          width={260} height={270}
+        /> :
+        <div className={styles.defaultImage}/>
       }
       <div className={styles.infoContainer}>
         <p className={styles.name}>{content.name}</p>
@@ -59,7 +64,11 @@ const Cardholder:  React.FC<ImageInfoProps> = ({ imageUrl, content}) => {
         </div>
         <div className={styles.iconsContainer}>
           {content.iconsToDisplay.map(iconLabel => (
-            <img key={iconLabel} src={iconMapping[iconLabel]} className={styles.iconImage} />
+            <Image
+              key={iconLabel} src={iconMapping[iconLabel]}
+              className={styles.iconImage}
+              width={20} height={20} alt={iconLabel}
+            />
           ))}
         </div>
       </div>
