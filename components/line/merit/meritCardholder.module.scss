@@ -1,0 +1,56 @@
+.font{
+    text-align: center;
+    font-family: YuGothic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: 3.2px;
+    color: #0057FF;
+}
+
+.cardholderContainer{
+    width: 404px;
+    height: 200px;
+    .circle{
+        margin: 0 auto;
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        background: #FBDF97;
+        display: flex;
+        justify-content: center;
+        z-index: -2;
+        .index{
+            margin-top: 10px;
+            @extend .font;
+        }
+    }
+    .rectangle {
+
+        width: 100%;
+        height: 158px;
+        background: #FBDF97;
+        margin-top: -41px;
+        z-index: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .innerBox {
+            justify-content: center;
+            width: calc(100% - 32px);
+            height: calc(100% - 32px);
+            background: #FFF;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .content {
+                @extend .font;
+                color: #0057FF;
+                background-clip: text;
+                max-width: 307px;}
+        }
+    }
+}

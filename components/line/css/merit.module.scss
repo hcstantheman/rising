@@ -1,0 +1,21 @@
+.font{
+    color: #5D6865;
+    font-family: YuGothic;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 6px;
+}
+
+.meritText{
+    @extend .font;
+    margin-left:24px;
+    margin-bottom: -5px;
+}
+.meritCardholder{
+    @extend .font;
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-start;
+}
