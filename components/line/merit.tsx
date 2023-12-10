@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './css/merit.module.scss'
 import DottedLine from "../common/DottedLine";
-import MeritCardholder from "./merit/MeritCardholder";
+import MeritCardholder from "./meritCardholder/MeritCardholder";
 
 
 
