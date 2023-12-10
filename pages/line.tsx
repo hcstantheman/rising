@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import styles from './css/line.module.scss';
+import Merit from "../components/line/merit";
 
 const Line: React.FC = () => {
   return (
@@ -18,8 +19,9 @@ const Line: React.FC = () => {
             <span className={styles.buttonText}>店舗一覧へ ＞</span>
           </div>
         </div>
-
-
+      </div>
+      <div className={styles.merit}>
+        <Merit/>
       </div>
       <Footer />
     </div>
