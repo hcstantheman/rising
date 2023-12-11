@@ -1,0 +1,23 @@
+.container {
+    background-color: #FFF;
+    width: 592px;
+    height: 383px;
+}
+
+.text {
+    padding: 35px 0 0 22px;
+    z-index: 1; // Ensure the text appears above the image
+    font-family: YuGothic;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 100% */
+    letter-spacing: 6px;
+    background: linear-gradient(to right, #00C2FF, #0057FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; // For browsers that don't support background-clip
+    -webkit-text-fill-color: transparent; // For WebKit browsers
+}
+
+

@@ -3,6 +3,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import styles from './css/line.module.scss';
 import Merit from "../components/line/merit";
+import Service from "../components/line/service";
 
 const Line: React.FC = () => {
   return (
@@ -22,6 +23,9 @@ const Line: React.FC = () => {
       </div>
       <div className={styles.merit}>
         <Merit/>
+      </div>
+      <div className={styles.service}>
+        <Service/>
       </div>
       <Footer />
     </div>
