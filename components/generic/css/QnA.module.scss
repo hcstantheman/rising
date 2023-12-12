@@ -30,15 +30,31 @@
     z-index: -100;
     .left {
         margin-top: 380px;
+        .leftMiddle{
+            margin-top: 220px;
+            margin-left: 200px;
+        }
+        .leftBottom{
+            margin-top: -400px;
+        }
     }
     .right {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-top: 0px;
+        margin-top: 0;
 
-        .rightBottom {
-            margin-top: -170px;
+        .rightMiddle {
+            margin-top: -330px;
+        }
+
+        .rightBottom1 {
+            margin-top: 480px
+        }
+
+        .rightBottom2 {
+            margin-top: -350px;
+            margin-right: 50px;
         }
     }
 
@@ -69,6 +85,17 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+    }
+
+    .questionBox {
+        position: absolute;
+        border: 1px solid #0091D2;
+        top: 1100px; // Position below titleBox
+        left: 52%; // Horizontally center relative to the parent
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
     }
 
 }

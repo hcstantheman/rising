@@ -1,18 +1,32 @@
 import React from 'react';
 import styles from './css/QnA.module.scss';
 import Image from "next/image";
+import Question from "./Question";
 
 
 const QnA: React.FC = () => {
   return (
     <div className={styles.container}>
       <div className={styles.background}>
-        <Image
-          src="/img/generic-bg-2.png"
-          width={269} height={677}
-          alt='background'
-          className={styles.left}
-        />
+        <div className={styles.left}>
+          <Image
+            src="/img/generic-bg-2.png"
+            width={269} height={677}
+            alt='background'
+          />
+          <Image
+            src="/img/generic-bg-4.png"
+            width={547} height={500}
+            alt='background'
+            className={styles.leftMiddle}
+          />
+          <Image
+            src="/img/generic-bg-5.png"
+            width={690} height={785}
+            alt='background'
+            className={styles.leftBottom}
+          />
+        </div>
         <div className={styles.right}>
           <Image
             src="/img/generic-bg-1.png"
@@ -20,14 +34,24 @@ const QnA: React.FC = () => {
             alt='background'
             className={styles.rightTop}
           />
-          <div className={styles.rightBottom}>
-            <Image
-              src="/img/generic-bg-3.png"
-              width={278} height={500}
-              alt='background'
-              className={styles.rightBottom}
-            />
-          </div>
+          <Image
+            src="/img/generic-bg-3.png"
+            width={278} height={500}
+            alt='background'
+            className={styles.rightMiddle}
+          />
+          <Image
+            src="/img/generic-bg-6.png"
+            width={338} height={542}
+            alt='background'
+            className={styles.rightBottom1}
+          />
+          <Image
+            src="/img/generic-bg-7.png"
+            width={436} height={421}
+            alt='background'
+            className={styles.rightBottom2}
+          />
         </div>
         <div className={styles.titleBox}>
           <p className={styles.firstLine}>ライジング薬局の</p>
@@ -40,6 +64,26 @@ const QnA: React.FC = () => {
           <p>いくら健康維持のために必要とはいえ、毎回の医療費も重なれば高額な出費となってしまいます。</p>
           <p>ジェネリック医薬品は、個人の医療費負担を軽くするだけでなく、国全体の医療費削減にも大きく貢献されることが期待されています。</p>
           <p>ライジンググループでも、患者さまのご希望に添えるよう可能な限りジェネリック医薬品での処方に対応させていただきます。</p>
+        </div>
+        <div className={styles.questionBox}>
+          <div>
+          <Question
+            question={'ジェネリック医薬品はなぜ安いの？'}
+            answer={'ジェネリック医薬品が低価格なのは、開発費用が少なく済むからです。品質は先発医薬品と同等です。'}
+          />
+          </div>
+          <div>
+          <Question
+            question={'ジェネリック医薬品は安全なの?'}
+            answer={'はい、安全です。'}
+            secondLine={'ジェネリック医薬品は厚生労働省の品質検査において、先発医薬品と同等の効果が確認されてから発売されていますので、安心してお飲みいただけます。'}
+          />
+          </div>
+          <Question
+            question={'ジェネリック医薬品を使用するには?'}
+            answer={'ジェネリック医薬品を飲みたい旨を、薬剤師にお伝えください。'}
+            secondLine={'医師の判断後、ジェネリック医薬品に変更する事が可能です。'}
+          />
         </div>
       </div>
     </div>

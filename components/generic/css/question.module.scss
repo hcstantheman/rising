@@ -1,0 +1,33 @@
+.font{
+    color: #5D6865;
+    font-family: YuGothic;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px; /* 166.667% */
+    letter-spacing: 3.6px;
+}
+.questionFont{
+    @extend .font;
+    font-family: YuGothicBold;
+    font-size: 16px;
+    letter-spacing: 3.2px;
+    color: #0091D2;
+}
+.answerFont{
+    @extend .questionFont;
+    color: #F37500;
+}
+
+.question, .answer{
+    display: flex;
+    gap: 40px;
+}
+.answer{
+    margin-top: 45px ;
+}
+.value{
+    @extend .font;
+    max-width: 430px;
+    overflow-wrap: break-word;
+}
