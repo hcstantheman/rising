@@ -7,6 +7,10 @@ import DottedLine from "../components/common/DottedLine";
 import Ball from "../components/health/Ball";
 
 const Health: React.FC = () => {
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.classList.add(styles.greyBackground);
+  };
+
   return (
     <div>
       <Header text='健康サポート薬局' />
@@ -65,6 +69,34 @@ const Health: React.FC = () => {
         </div>
       </div>
       <div className={styles.branch}>
+        <p className={styles.title}>ライジンググループの健康サポート薬局</p>
+        <DottedLine numDots={85}/>
+        <div className={styles.branchContent}>
+          <div className={styles.box}>
+            <Image
+              src={''} alt={'logo'} width={300} height={200} onError={handleImageError}
+            />
+            <p className={styles.branchTitle}>川棚薬局</p>
+          </div>
+          <div className={styles.box}>
+            <Image
+              src={''} alt={'logo'} width={300} height={200} onError={handleImageError}
+            />
+            <p className={styles.branchTitle}>美秋薬局</p>
+          </div>
+          <div className={styles.box}>
+            <Image
+              src={''} alt={'logo'} width={300} height={200} onError={handleImageError}
+            />
+            <p className={styles.branchTitle}>セレッソ薬局</p>
+          </div>
+          <div className={styles.box}>
+            <Image
+              src={''} alt={'logo'} width={300} height={200} onError={handleImageError}
+            />
+            <p className={styles.branchTitle}>サン薬局</p>
+          </div>
+        </div>
       </div>
 
       <Footer />

@@ -57,4 +57,24 @@
         // Add any additional styling needed for the container
     }
 }
+.branch{
+    margin: 175px 0 104px 0;
+    text-align: center;
+    align-items: center;
+    .title{
+        margin-bottom: 16px;
+    }
+    .branchContent{
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.greyBackground {
+    background-color: grey; // Set to your preferred shade of grey
+    width: 300px; // Adjust as needed
+    height: 200px; // Adjust as needed
+}
+
 
