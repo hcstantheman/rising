@@ -1,0 +1,60 @@
+.font{
+    color: #5D6865;
+    font-family: YuGothic;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: 3.2px;
+}
+
+.intro{
+    @extend .font;
+    margin: 37px 0 0 182px;
+    max-width: 659px;
+}
+.title{
+    font-family: YuGothicBold;
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 6px;
+    margin-bottom: 23px;
+}
+.explain{
+    @extend .font;
+    margin: 104px auto 0;
+    text-align: center;
+
+    .explainContent{
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        .explainText{
+            display: flex;
+            max-width: 480px;
+            align-items: center;
+            text-align: left;
+        }
+    }
+}
+.merit{
+    @extend .font;
+    margin: 106px auto 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    .title {
+        margin-bottom: 28px;
+    }
+    .grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Three columns with equal width
+        grid-template-rows: repeat(2, auto); // Two rows, height adjusts to content
+        gap: 84px; // 84px gap both vertically and horizontally
+        justify-content: center; // Center the entire grid horizontally
+        align-items: center; // Center the grid items vertically
+        // Add any additional styling needed for the container
+    }
+}
+

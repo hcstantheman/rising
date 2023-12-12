@@ -1,0 +1,34 @@
+.font{
+    color: #5D6865;
+    text-align: center;
+    font-family: YuGothic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 187.5% */
+    letter-spacing: 3.2px;
+}
+
+
+.ballContainer{
+    width: 362px;
+    height: 362px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: -10px -10px 25px 0px rgba(204, 204, 204, 0.90) inset, 10px 10px 20px 0px rgba(255, 255, 255, 0.90) inset, -10px 10px 20px 0px rgba(204, 204, 204, 0.20) inset, 10px -10px 20px 0px rgba(204, 204, 204, 0.20) inset, 1px 1px 2px 0px rgba(204, 204, 204, 0.50), -1px -1px 2px 0px rgba(255, 255, 255, 0.30);
+    .text{
+        @extend .font;
+        max-width: 250px;
+    }
+    .subtext{
+        @extend .font;
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: #A2A8A6;
+    }
+}
