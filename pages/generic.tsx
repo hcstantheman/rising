@@ -3,6 +3,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import styles from './css/generic.module.scss';
 import Image from "next/image";
+import QnA from "../components/generic/QnA";
 
 const Generic: React.FC = () => {
   return (
@@ -114,6 +115,9 @@ const Generic: React.FC = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className={styles.second}>
+        <QnA/>
       </div>
       <Footer />
     </div>
