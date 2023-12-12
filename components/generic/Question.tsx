@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './css/question.module.scss';
-import Image from "next/image";
-import {TRUE} from "sass";
 
 interface Props {
   question: string;
