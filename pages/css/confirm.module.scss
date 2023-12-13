@@ -1,0 +1,10 @@
+.cardContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 112px;
+}
+
+.dottedLine{
+    transform: rotate(90deg);
+    transform-origin: left top;
+}
