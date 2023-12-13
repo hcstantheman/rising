@@ -1,0 +1,44 @@
+.font{
+    font-family: YuGothicBold;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px; /* 266.667% */
+    letter-spacing: 6px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 104px;
+}
+
+.title{
+    @extend .font;
+    text-shadow: 2px 3px 2px rgba(131, 178, 212, 0.65);
+    background: linear-gradient(93deg, #00B0FF 0.8%, #3354C9 99.17%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.box{
+    display: flex;
+    align-items: center;
+    margin: 48px 200px 0;
+    padding: 48px 106px;
+    width: 1040px;
+    height: 153px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    .content{
+        @extend .font;
+        font-family: YuGothic;
+        text-align: left;
+        color: #5D6865;
+        font-size: 16px;
+        line-height: 30px; /* 187.5% */
+        letter-spacing: 3.2px;
+    }
+}
