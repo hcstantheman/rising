@@ -7,3 +7,9 @@
     display: inline-block;
 }
 
+.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    align-items: center; // This centers the dots if the container is wider than the dots
+}
