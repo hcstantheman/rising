@@ -7,7 +7,7 @@ interface Props {
   firstWord: string;
   paragraph: string;
 }
-const TitleBox:  React.FC<Props> = ({ imageUrl, firstWord, paragraph}) => {
+const Cardholder:  React.FC<Props> = ({ imageUrl, firstWord, paragraph}) => {
   return (
     <div className={styles.container}>
       <Image
@@ -22,4 +22,4 @@ const TitleBox:  React.FC<Props> = ({ imageUrl, firstWord, paragraph}) => {
   )
 }
 
-export default TitleBox;
+export default Cardholder;

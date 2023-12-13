@@ -8,3 +8,41 @@
     transform: rotate(90deg);
     transform-origin: left top;
 }
+.list{
+    margin: 73px 95px 0;
+    border-radius: 20px;
+    background: #FFF;
+    position: relative;
+    box-sizing: border-box;
+
+    $border: 7px; /* Border thickness */
+    color: #FFF;
+    background-clip: padding-box; /* Important to ensure the background doesn't bleed into the border */
+    border: solid $border transparent; /* Make the border transparent */
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -$border; /* Extend the pseudo-element outside the div */
+        border-radius: inherit; /* Match the border-radius of the div */
+        background: linear-gradient(90deg, #5EAED2, #FBDF97); /* Adjust the gradient direction and colors */
+    }
+    .listContainer{
+        margin: 47.38px 114px 64px;
+    }
+    .listTitle{
+        color: #5D6865;
+        font-family: YuGothicBold;
+        font-size: 30px;
+        font-style: normal;
+        line-height: 0;
+        letter-spacing: 6px;
+
+    }
+    .listItem
+    {
+        margin-top: 40px;
+    }
+}

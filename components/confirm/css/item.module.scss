@@ -1,0 +1,29 @@
+.container{
+    height: 42px;
+    width: 1040px;
+    display: flex;
+    align-items: center;
+    color: #5D6865;
+    font-family: YuGothic;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 0;
+    letter-spacing: 3.2px;
+    border-bottom: 1px solid #FBDF97;
+    padding-top: 8px;
+}
+.name{
+    margin-left: 32px;
+    width: 154px;
+}
+.postcode{
+    margin-left: 56.1px;
+    width:135.9px;
+}
+.address{
+    margin-left: 8.56px;
+    width:414.11px;
+}
+.phone{
+    margin-left: 56px;
+}
