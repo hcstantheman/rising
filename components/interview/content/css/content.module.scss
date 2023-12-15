@@ -1,0 +1,31 @@
+.title{
+    margin-left: 16px;
+    margin-bottom: -5px;
+    color: #5D6865;
+    font-family: YuGothicBold;
+    font-size: 30px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 6px;
+}
+.cardContainer{
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+}
+.endingText{
+    margin-top: 125px;
+    text-align: center;
+    text-shadow: 2px 3px 2px rgba(131, 178, 212, 0.65);
+    font-family: YuGothicBold;
+    font-size: 30px;
+    font-style: normal;
+    line-height: 46px; /* 153.333% */
+    letter-spacing: 6px;
+    background: linear-gradient(93deg, #00B0FF 0.8%, #3354C9 99.17%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
