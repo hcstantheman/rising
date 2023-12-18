@@ -1,0 +1,20 @@
+.container {
+    position: relative; // The container is set to relative positioning
+    width: 710px; // Set to the width of the background image
+    height: 561px; // Set to the height of the background image
+
+    .background {
+        width: 100%; // Stretch to fill the container
+        height: 100%; // Stretch to fill the container
+        filter: blur(10px);
+    }
+
+    .photo {
+        position: absolute; // Positioned absolutely relative to its parent
+        top: calc(50% - 3px); // Center vertically
+        left: calc(50% - 3px); // Center horizontally
+        width: 673px; // Width of the top image
+        height: 402px; // Height of the top image
+        transform: translate(-50%, -50%); // Adjusts the positioning to truly center the image
+    }
+}

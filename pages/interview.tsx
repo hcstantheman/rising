@@ -4,6 +4,7 @@ import Footer from '../components/footer/Footer';
 import styles from './css/interview.module.scss';
 import Intro from "../components/interview/intro";
 import Content from "../components/interview/content/content";
+import Discussion from "../components/interview/discussion/discussion";
 
 const Interview: React.FC = () => {
   return (
@@ -16,6 +17,9 @@ const Interview: React.FC = () => {
         <div className={styles.content}>
           <Content/>
         </div>
+      </div>
+      <div className={styles.discussion}>
+        <Discussion/>
       </div>
       <Footer/>
     </div>

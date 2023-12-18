@@ -1,0 +1,74 @@
+.container{
+    width: 100%;
+    background: #FBDF97;
+
+    padding: 88px 0;
+}
+.titleContainer{
+    margin:0 320px;
+    height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .title{
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+        font-family: YuGothicBold;
+        font-size: 24px;
+        font-style: normal;
+        line-height: 30px; /* 125% */
+        letter-spacing: 4.8px;
+        background: linear-gradient(94deg, #FFB800 8.65%, #FF6B00 96.24%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+.cardContainer{
+    margin-top: 104px;
+    margin-right: 94px;
+    background: #FFFFFF;
+    padding: 91px 106px 91px 0;
+    border-radius: 0 40px 40px 0;
+    display: flex;
+    gap: 78px;
+    .contentContainer{
+        margin-top: 58px;
+    }
+    .barContainer{
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .text{
+        margin-top: 72px;
+        max-width: 450px;
+        color: #5D6865;
+        font-family: YuGothic;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 30px; /* 187.5% */
+        letter-spacing: 3.2px;
+    }
+}
+.firstContainer{
+    @extend .cardContainer;
+}
+.secondContainer{
+    @extend .cardContainer;
+    margin-right: 0;
+    margin-left: 94px;
+    border-radius: 94px 0 0 94px;
+    padding: 96px 0 96px 86px;
+    gap: 100px;
+    .contentContainer{
+        margin-top: 11px;
+    }
+    .barContainer{
+        margin-top: 32px;
+    }
+    .text{
+        margin-top: 70px;
+    }
+}
