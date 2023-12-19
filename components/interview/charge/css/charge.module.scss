@@ -7,8 +7,15 @@
     line-height: normal;
     letter-spacing: 6px;
 }
+.titleContainer{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center; // Center items in this container
+    flex-wrap: wrap;
+}
+
 .title{
-    margin: 0 auto -20px;
+    margin-bottom: 16px;
 }
 .cardContainer{
     margin-top: 72px;
