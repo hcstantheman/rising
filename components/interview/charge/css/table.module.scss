@@ -1,0 +1,28 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    td {
+        border: 2px solid #FBDF97;
+        text-align: center;
+        height: 85px;
+        background: #FBDF9733;
+        font-size: 20px;
+        font-family: YuGothic;
+
+    }
+    .firstColumn{
+        background: #FFFFFF;
+        width: 17%;
+    }
+    .secondRow{
+        td{
+            height:100px;
+            background: #FFFFFF;
+            font-size: 24px;
+            font-family: YuGothicBold;
+        }
+        .firstColumn{
+            font-family: YuGothic;
+        }
+    }
+}
