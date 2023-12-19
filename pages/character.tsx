@@ -3,6 +3,7 @@ import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import styles from './css/character.module.scss';
 import CharCard from "../components/character/charCard";
+import CharContent from "../components/character/charContent";
 
 const Character: React.FC = () => {
   return (
@@ -18,13 +19,7 @@ const Character: React.FC = () => {
           </div>
         </div>
       <div className={styles.contentContainer}>
-        <div className={styles.firstRow}>
-          <CharCard
-            title={'山口県内に店舗数が豊富'}
-            line1={'2024年1月現在、山口県内に17店舗を構えております。'}
-            line2={'店舗数が豊富で自宅近くの店舗に勤めることができ、転居を伴う転勤もほとんどありません。山口県内にとどまり、慣れ親しんだ地域で働き続けることができるので安心です。'}
-          />
-        </div>
+        <CharContent/>
       </div>
       <Footer/>
     </div>
