@@ -1,10 +1,12 @@
+.dottedLine{
+    display: flex;
+    gap: 3px;
+}
 .dot {
     width: 5px;
     height: 5px;
     background-color: #FBDF97;
-    margin-right: 3px;
     border-radius: 50%;
-    display: inline-block;
 }
 
 .vertical {
@@ -12,4 +14,8 @@
     flex-direction: column;
     gap: 3px;
     align-items: center;
+}
+.widerDots{
+    @extend .dottedLine;
+    gap: 5px;
 }
