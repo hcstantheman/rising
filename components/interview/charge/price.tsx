@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./css/price.module.scss";
 import DottedLine from "../../common/DottedLine";
 import PriceTable from "./table";
+import PriceNote from "./note";
 
 const Price: React.FC = () => {
   return(
@@ -17,8 +18,7 @@ const Price: React.FC = () => {
         <PriceTable/>
       </div>
       <div className={styles.noteContainer}>
-        <p className={styles.note}>※ご利用には、事前に面談が必要です。</p>
-        <p className={styles.note}>※ご利用には、事前に面談が必要です。</p>
+        <PriceNote/>
       </div>
 
     </div>
