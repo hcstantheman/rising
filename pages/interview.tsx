@@ -5,6 +5,7 @@ import styles from './css/interview.module.scss';
 import Intro from "../components/interview/intro";
 import Content from "../components/interview/content/content";
 import Discussion from "../components/interview/discussion/discussion";
+import Charge from "../components/interview/charge/charge";
 
 const Interview: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const Interview: React.FC = () => {
       <div className={styles.discussion}>
         <Discussion/>
       </div>
+      <Charge/>
       <Footer/>
     </div>
   )
