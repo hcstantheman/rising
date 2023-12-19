@@ -22,9 +22,8 @@ $refWidth: 404px;
     }
 
     .thirdImage{
-        top: calc(307px + 16px + 55px);
+        top: calc($refHeight + 75px);
         left: 136px;
-        margin-top: 75px;
     }
     .secondCard{
         top: calc($refHeight + 145px);
