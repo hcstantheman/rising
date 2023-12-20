@@ -1,0 +1,33 @@
+.container{
+    color: #5D6865;
+    font-family: YuGothicBold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.firstRow, .secondRow{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    letter-spacing: 3.2px;
+    .line{
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        margin-left: 8px;
+        font-family: YuGothic;
+        font-weight: 500;
+        line-height: 30px; /* 187.5% */
+        letter-spacing: 3.2px;
+    }
+}
+.secondRow{
+    gap: 11px;
+}
+.arrow{
+    margin-top: 5px;
+}

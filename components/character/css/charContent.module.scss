@@ -1,0 +1,47 @@
+$refHeight: 378px;
+$refWidth: 404px;
+
+.container {
+    position: relative;
+
+    .firstImage, .secondImage, .thirdImage, .fourthImage,
+    .fifthImage, .sixthImage, .secondCard, .thirdCard{
+        position: absolute;
+    }
+
+    .firstImage {
+        top: 17px;
+        left: 404px;
+        margin-left: 117px;
+    }
+
+    .secondImage {
+        top: calc(17px + 230px);
+        left: calc(404px + 117px + 364px);
+        margin-left: 49px;
+    }
+
+    .thirdImage{
+        top: calc($refHeight + 75px);
+        left: 136px;
+    }
+    .secondCard{
+        top: calc($refHeight + 145px);
+        left: calc(483px + 404px);
+    }
+    .fourthImage{
+        top: calc($refHeight + 504px);
+        left: calc($refWidth + 49px);
+    }
+    .thirdCard{
+        top: calc($refHeight + 525px);
+    }
+    .fifthImage{
+        top: calc($refHeight + 741px);
+        left: calc($refWidth + 113px);
+    }
+    .sixthImage{
+        top: calc($refHeight + 692px);
+        left: calc($refWidth + 602px);
+    }
+}

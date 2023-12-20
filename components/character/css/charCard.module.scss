@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .title{
+        display: inline-block;
+        border-radius: 10px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #5EAED2;
+        background: #FFF;
+        color: rgba(194, 250, 216, 0.50);
+        padding: 12px 36px;
+        text-align: justify;
+        font-family: YuGothicBold;
+        font-size: 20px;
+        font-style: normal;
+        line-height: 30px;
+        letter-spacing: 4px;
+        background: linear-gradient(90deg, #5EAED2 0%, #FBDF97 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .textBox{
+        border-radius: 26px;
+        background: #FFF;
+        box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+        width: 330px;
+        padding: 48px 37px;
+        color: #5D6865;
+        font-family: YuGothic;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 30px; /* 187.5% */
+        letter-spacing: 3.2px;
+    }
+}
