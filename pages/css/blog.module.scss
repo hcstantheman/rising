@@ -1,0 +1,26 @@
+.font{
+  color: #5D6865;
+  text-align: center;
+  font-family: YuGothic;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.6px;
+}
+
+.searchContainer{
+  margin: 120px auto 0;
+  width: 268px;
+  height: 54px;
+  border-radius: 20px;
+  border: 1px solid rgba(93, 104, 101, 0.50);
+  display: flex;
+  padding: 14px 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  p{
+    @extend .font;
+  }
+}
