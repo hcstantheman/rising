@@ -9,7 +9,7 @@ import branchData from "../const/info";
 
 
 
-const Making: React.FC = () => {
+const Branch: React.FC = () => {
   const [cardholderData, setCardholderData] = useState<ContentProps[]>([]);
   useEffect(() => {
     setCardholderData(branchData)
@@ -42,4 +42,4 @@ const Making: React.FC = () => {
   );
 };
 
-export default Making;
+export default Branch;
