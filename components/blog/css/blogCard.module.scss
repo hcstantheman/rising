@@ -1,0 +1,41 @@
+.cardContainer{
+  width: calc(380px - 44px - 44px);
+  height: calc(400px - 28px - 37px);
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
+  padding: 28px 44px 37px;
+
+  color: #685D5D;
+  text-align: center;
+  font-family: YuGothic;
+  font-size: 14px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 2.8px;
+  .dateContainer{
+    margin-top: 21px;
+    display: flex;
+    gap: 33px;
+    .cardLocation{
+      border-radius: 5px;
+      background: #FBDF97;
+      width: 85px;
+      height: 20px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      font-size: 10px;
+    }
+  }
+  .noImageContainer{
+    width: 292px;
+    height: 232px;
+    background: #D9D9D9;
+  }
+  .cardTitle{
+    font-family: YuGothicBold;
+    font-size: 16px;
+    max-width: 292px;
+    margin: 15px auto;
+  }
+}

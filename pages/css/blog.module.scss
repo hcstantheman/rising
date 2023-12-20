@@ -11,8 +11,8 @@
 
 .searchContainer{
   margin: 120px auto 0;
-  width: 268px;
-  height: 54px;
+  width: 210px;
+  height: 26px;
   border-radius: 20px;
   border: 1px solid rgba(93, 104, 101, 0.50);
   display: flex;
@@ -23,4 +23,12 @@
   p{
     @extend .font;
   }
+}
+.blogCardContainer{
+  display: grid;
+  margin-top: 56px;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 56px; /* Spacing between grid items */
+  justify-items: center; /* Center grid items horizontally */
+  align-items: center; /* Center grid items vertically */
 }
