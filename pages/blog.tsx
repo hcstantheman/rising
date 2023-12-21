@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import ReactPaginate from 'react-paginate';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import styles from './css/blog.module.scss';
@@ -13,7 +13,7 @@ const Blog: React.FC = () => {
 
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [posts, setPosts] = useState<any[]>([]); // State to hold your posts
-  const itemsPerPage = 10;
+  const itemsPerPage = 9;
   const [selectedBranch, setSelectedBranch] = useState<{ value: string; label: string } | null>(null);
   const handleFilterChange = (selectedOption: { value: string; label: string } | null) => {
     setSelectedBranch(selectedOption);
@@ -34,6 +34,39 @@ const Blog: React.FC = () => {
     fetchData();
   }, [currentPage, selectedBranch]);
 
+  const fontStyle = {
+    color: '#5D6865',
+    textAlign: 'center',
+    fontFamily: 'YuGothic, sans-serif', // Ensure your font is correctly imported or available
+    fontSize: '18px',
+    fontStyle: 'normal',
+    fontWeight: 700,
+    lineHeight: 'normal',
+    letterSpacing: '3.6px',
+  };
+
+  const customSelectStyles = {
+    control: (provided: any) => ({
+      ...provided,
+      ...fontStyle,
+      padding: '14px 34px',
+      borderRadius: '20px',
+      border: '1px solid rgba(93, 104, 101, 0.50)'
+  }),
+    placeholder: (provided: any) => ({
+      ...provided,
+      ...fontStyle,
+    }),
+    option: (provided: any) => ({
+      ...provided,
+      ...fontStyle,
+    }),
+    indicatorSeparator: () => ({
+      display: 'none', // Hide the indicator separator
+    })
+
+
+  };
 
   return(
     <div>
@@ -44,8 +77,8 @@ const Blog: React.FC = () => {
             value={selectedBranch}
             onChange={handleFilterChange}
             options={branches}
-            className="branch-select"
-            classNamePrefix="select"
+            styles={customSelectStyles}
+            placeholder="店舗の絞り込み"
           />
         </div>
         <div className={styles.blogCardContainer}>
@@ -60,6 +93,17 @@ const Blog: React.FC = () => {
           ))}
         </div>
       </div>
+      <ReactPaginate
+        previousLabel={'Previous'}
+        nextLabel={'Next'}
+        breakLabel={'...'}
+        pageCount={pageCount} // Total number of pages
+        marginPagesDisplayed={2} // Number of pages to display at the edges
+        pageRangeDisplayed={5} // Number of pages to display in the middle
+        onPageChange={handlePageClick} // Function to call when a page is clicked
+        containerClassName={'pagination'} // Class name for the container
+        activeClassName={'active'} // Class name for the active page
+      />
       <Footer />
     </div>
   );
