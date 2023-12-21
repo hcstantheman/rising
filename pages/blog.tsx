@@ -20,13 +20,15 @@ const Blog: React.FC = () => {
   };
   useEffect(() => {
     const fetchData = async () => {
-      const posts = await fetchPosts(selectedBranch?.label, itemsPerPage);
+      const posts = await fetchPosts(selectedBranch?.value, itemsPerPage);
       // @ts-ignore
       const postsWithData = await Promise.all(posts.map(async post => {
         const imageUrl = ExtractImageUrl(post.content.rendered) || '';
         const tags = await fetchTags(post.id);
+
         return { ...post, imageUrl, tags };
       }));
+      console.log(postsWithData)
       setPosts(postsWithData);
     };
     fetchData();
