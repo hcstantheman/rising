@@ -17,6 +17,7 @@ const BlogCard: React.FC<Props> = ({ title, date, img, location }) => {
         src={img} alt="blog"
         width={292}
         height={232}
+        className={styles.cardImage}
       />
         :
       <div className={styles.noImageContainer}/>
