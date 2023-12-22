@@ -1,3 +1,7 @@
+.hidden{
+  display: none !important;
+}
+
 .searchContainer{
   margin: 120px auto 0;
   width: 300px;
@@ -12,4 +16,43 @@
   justify-items: center; /* Center grid items horizontally */
   align-items: center; /* Center grid items vertically */
 }
+
+.pagination {
+  margin-top: 150px;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  li {
+    margin: 0 12px;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background-color: #FBDF97;
+      color: #5D6865; // Text color
+      text-decoration: none;
+      font-family: 'Corporate Logo ver3', sans-serif; // Ensure the font is correctly imported or available
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 3.2px;
+      text-align: center;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .active a {
+    opacity: 1; // Full opacity for the active page
+    box-shadow: 0 0 10px; // Example glow effect
+  }
+}
+
+
 
