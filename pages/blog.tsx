@@ -8,6 +8,7 @@ import Select from "react-select";
 import {ExtractImageUrl} from "../util/ExtractImageUrl";
 import branches from "../const/branches";
 import {fetchPosts, fetchTags} from "../api/blogApi";
+import Link from "next/link";
 
 const Blog: React.FC = () => {
 
@@ -88,13 +89,14 @@ const Blog: React.FC = () => {
         </div>
         <div className={styles.blogCardContainer}>
           {posts.map(post => (
-            <BlogCard
-              key={post.id}
-              title={post.title.rendered}
-              date={new Date(post.date).toLocaleDateString('ja-JP')}
-              location={post.tags.length > 0 ? post.tags[0].name : '薬局'}
-              img={post.imageUrl}
-            />
+            <Link href={`/blog/${post.id}`} key={post.id} className={styles.postLink}>
+                <BlogCard
+                  title={post.title.rendered}
+                  date={new Date(post.date).toLocaleDateString('ja-JP')}
+                  location={post.tags.length > 0 ? post.tags[0].name : '薬局'}
+                  img={post.imageUrl}
+                />
+            </Link>
           ))}
         </div>
       </div>

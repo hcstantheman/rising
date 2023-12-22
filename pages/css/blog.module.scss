@@ -15,6 +15,10 @@
   grid-gap: 56px; /* Spacing between grid items */
   justify-items: center; /* Center grid items horizontally */
   align-items: center; /* Center grid items vertically */
+  .postLink{
+    text-decoration: none; // Remove underline from links
+    color: inherit; // Keep the text color consistent
+  }
 }
 
 .pagination {
