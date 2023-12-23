@@ -16,7 +16,7 @@ const Line: React.FC = () => {
           感染症予防にも有効なサービスですので、是非ご利用ください。
         </div>
         <div className={styles.introButton}>
-          <StyleButton text={'店舗一覧へ ＞'}/>
+          <StyleButton text={'店舗一覧へ ＞'} to={'/branch'}/>
         </div>
       </div>
       <div className={styles.merit}>
