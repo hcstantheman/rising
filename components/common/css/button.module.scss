@@ -1,0 +1,32 @@
+.button{
+  width: 195px;
+  height: 61px;
+  position: relative;
+    .layer{
+      margin: 4px 0 0 4px;
+      width: 187px;
+      height: 53px;
+      border-radius: 20px;
+      border: #FBDF97 1px solid;
+      z-index: -1;
+      position: absolute;
+    }
+    .topLayer{
+      @extend .layer;
+      margin: 0 4px 4px 0;
+      z-index: 10;
+      background: white;
+      display: flex; // Set up Flexbox
+      align-items: center; // Center vertically
+      justify-content: center; // Center horizontally
+        .buttonText{
+          margin-left: 8px;
+          color: #5D6865;
+          font-family: YuGothic;
+          font-size: 16px;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: 3.2px;
+        }
+    }
+}
