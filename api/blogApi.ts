@@ -12,7 +12,6 @@ export const fetchAllPostIds = async () => {
 
 export const fetchPosts = async (page: number = 1, tagId?: string, itemsPerPage: number = 9) => {
   let url = `${BASE_URL}/posts?_embed&per_page=${itemsPerPage}&page=${page}`;
-  console.log('url', url);
   if (tagId) {
     url += `&tags=${tagId}`;  // Use the 'tags' query parameter to filter by tag ID
   }
