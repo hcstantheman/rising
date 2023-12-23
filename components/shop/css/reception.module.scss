@@ -1,0 +1,17 @@
+.container{
+    color: #5D6865;
+    text-align: center;
+    font-family: YuGothicBold;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 6px;
+    .buttonContainer{
+        margin-top: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+}
