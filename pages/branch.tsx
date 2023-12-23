@@ -13,17 +13,6 @@ const Branch: React.FC = () => {
   const [cardholderData, setCardholderData] = useState<ContentProps[]>([]);
   useEffect(() => {
     setCardholderData(branchData)
-
-    // Fetch data from API
-    // fetch('your-api-url')
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     setCardholderData(data); // Assuming 'data' is an array of cardholder data
-    //   })
-    //   .catch(error => {
-    //     // Handle any errors
-    //     console.error('Error fetching data:', error);
-    //   });
   }, []);
 
   return (
