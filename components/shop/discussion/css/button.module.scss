@@ -1,0 +1,28 @@
+.container{
+    width: 178.226px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(98deg, rgba(104, 201, 245, 0.80) 3.41%, rgba(168, 248, 180, 0.80) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerLonger{
+    @extend .container;
+    width: 300px;
+}
+
+.buttonText{
+    color: #FFF;
+    padding-bottom: 1px;
+    text-shadow: 2px 2px 2px rgba(76, 76, 76, 0.50);
+    font-family: YuGothicBold;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 4px;
+}
+.buttonTextLonger{
+    @extend .buttonText;
+
+}

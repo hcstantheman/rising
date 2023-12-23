@@ -5,6 +5,7 @@ import styles from './css/shop.module.scss';
 import Image from "next/image";
 import ShopInfo from "../components/shop/ShopInfo";
 import Reception from "../components/shop/Reception";
+import ShopCardholder from "../components/shop/discussion/ShopCardholder";
 
 const Shop: React.FC = () => {
   return(
@@ -14,6 +15,9 @@ const Shop: React.FC = () => {
         className={styles.titleImage}/>
       <div className={styles.infoContainer}><ShopInfo/></div>
       <div className={styles.receptionContainer}><Reception/></div>
+      <div className={styles.cardContainer}>
+        <ShopCardholder/>
+      </div>
       <Footer/>
     </div>
   )
