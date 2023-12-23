@@ -19,13 +19,14 @@ const Post = () => {
     const id = Array.isArray(postId) ? postId[0] : postId;
 
     if (id) {
-      fetchPost(id).then(async data => {
+      fetchPost(id).then(data => {
         setPost(data);
       }).catch(error => {
         console.error('Error fetching post:', error);
       });
     }
   }, [postId]);
+
 
   const settings = {
     dots: true,
@@ -65,9 +66,9 @@ const Post = () => {
           <p key={index}>{paragraph}</p>
         ))}
         <div className={styles.buttonContainer}>
-          <StyleButton text={'＜　前の記事へ'}/>
-          <StyleButton text={'一覧へ戻る'}/>
-          <StyleButton text={'次の記事へ　＞'}/>
+          {post.prevPostId && <StyleButton text={'＜　前の記事へ'} to={`/blog/${post.prevPostId}`}/>}
+          <StyleButton text={'一覧へ戻る'} to={'/blog'}/>
+          {post.nextPostId && <StyleButton text={'次の記事へ　＞'} to={`/blog/${post.nextPostId}`}/>}
         </div>
       </div>
       <Footer/>

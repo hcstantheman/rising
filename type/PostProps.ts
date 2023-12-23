@@ -5,4 +5,6 @@ export interface Post {
   content: string[];
   images: string[];
   tag: string;
+  prevPostId: number | null;
+  nextPostId: number | null;
 }

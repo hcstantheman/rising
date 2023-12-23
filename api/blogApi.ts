@@ -4,6 +4,12 @@ import parse from "node-html-parser";
 
 const BASE_URL = 'https://rising.local/wp-json/wp/v2';
 
+export const fetchAllPostIds = async () => {
+  const url = `${BASE_URL}/posts?_embed&fields=id`;  // Adjust the URL to fetch only IDs
+  const response = await axios.get(url);
+  return response.data.map((post: { id: any; }) => post.id);  // Return an array of IDs
+};
+
 export const fetchPosts = async (page: number = 1, tagId?: string, itemsPerPage: number = 9) => {
   let url = `${BASE_URL}/posts?_embed&per_page=${itemsPerPage}&page=${page}`;
   console.log('url', url);
@@ -30,6 +36,11 @@ export const fetchPost = async (postId: string | string[]): Promise<Post> => {
   const images = root.querySelectorAll('img'); // Find all image tags
   const tag = await fetchTags(postId);
 
+  const allPostIds = await fetchAllPostIds();
+  const currentPostIndex = allPostIds.indexOf(parseInt(postId as string));
+  const prevPostId = allPostIds[currentPostIndex - 1] || null;
+  const nextPostId = allPostIds[currentPostIndex + 1] || null;
+
 
   const imageUrls = images.map(img => img.getAttribute('src')).filter(src => src);
   const paragraphs = root.querySelectorAll('p').map(p => p.text).filter(text => text.trim());
@@ -37,7 +48,9 @@ export const fetchPost = async (postId: string | string[]): Promise<Post> => {
     ...postData,
     images: imageUrls,
     content: paragraphs,
-    tag: tag[0].name
+    tag: tag[0].name,
+    prevPostId: prevPostId,  // Add the previous post ID
+    nextPostId: nextPostId   // Add the next post ID
   };
 };
 
