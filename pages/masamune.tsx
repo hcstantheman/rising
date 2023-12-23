@@ -6,6 +6,7 @@ import Image from "next/image";
 import ShopInfo from "../components/shop/ShopInfo";
 import Reception from "../components/shop/Reception";
 import ShopCardholder from "../components/shop/discussion/ShopCardholder";
+import ShopBlog from "../components/shop/ShopBlog";
 
 const Shop: React.FC = () => {
   return(
@@ -15,9 +16,8 @@ const Shop: React.FC = () => {
         className={styles.titleImage}/>
       <div className={styles.infoContainer}><ShopInfo/></div>
       <div className={styles.receptionContainer}><Reception/></div>
-      <div className={styles.cardContainer}>
-        <ShopCardholder/>
-      </div>
+      <div className={styles.cardContainer}><ShopCardholder/></div>
+      <div className={styles.blogContainer}><ShopBlog/></div>
       <Footer/>
     </div>
   )
