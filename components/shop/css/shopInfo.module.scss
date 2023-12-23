@@ -16,7 +16,6 @@
 .infoContainer{
     width: 70%;
     margin: 0 auto;
-    border: 1px red solid;
     border-radius: 20px;
     background: #FFF;
     box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.25);
@@ -25,5 +24,62 @@
     @extend .font;
 }
 .leftContainer{
+    .infoText{
+        padding: 32px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .phone, .landline{
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        padding: 4px 0;
+        .icon{
+            width: 33px;
+            height: 33px;
+        }
+        p{
+            @extend .font;
+            font-size: 18px;
+            line-height: 25px; /* 138.889% */
+        }
+    }
+}
+
+.rightContainer{
+    .upperContainer{
+        height:181px;
+    }
+    .firstLine, .secondLine{
+        margin-top: 14px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        .iconContainer{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            @extend .font;
+            font-size: 12px;
+            letter-spacing: 2.4px;
+            .icon{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .secondLine{
+        margin-top: 25px;
+    }
+    .lowerContainer{
+        margin-top: 38px;
+        display: flex;
+        gap: 7px;
+        flex-direction: column;
+        .nearbyText{
+            @extend .contentFont;
+        }
+    }
 
 }

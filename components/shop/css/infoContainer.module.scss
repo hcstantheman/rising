@@ -1,0 +1,19 @@
+.infoContainer{
+    display: flex;
+    gap: 28px;
+    color: #5D6865;
+    font-family: YuGothic;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 25px;
+    letter-spacing: 3.2px;
+}
+.leftContainer{
+    width: 78px;
+}
+.rightContainer{
+    width: 358px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
