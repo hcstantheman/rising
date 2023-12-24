@@ -52,7 +52,8 @@
     margin-left: 61px;
     display: inline-flex;
     justify-content: space-between;
-    gap: 40px;
+    gap:40px;
+
     .firstColumn{
         width: 314px;
     }
@@ -64,6 +65,7 @@
     }
     .title{
         @extend .boldWord;
+        margin-bottom: 16px;
     }
     .list{
         display: flex;
@@ -99,4 +101,12 @@
     text-align: center;
     @extend .word;
     font-size: 14px;
+}
+
+.link{
+    text-decoration: none;
+    color: inherit;
+}
+.space{
+    height: 24px;
 }

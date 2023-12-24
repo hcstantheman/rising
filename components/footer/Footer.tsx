@@ -1,8 +1,29 @@
 import React from 'react';
 import styles from './Footer.module.scss';
 import Image from "next/image";
+import FooterLinkList from './FooterLinkList';
 
 const Footer = () => {
+  const shopCreationLinks = [
+    { name: '調剤薬局の特徴', href: '/character' },
+    { name: 'お店作りについて', href: '/making' },
+    { name: '健康サポート薬局について', href: '/health' },
+    { name: '災害発生時の体制', href: '/confirm' },
+  ]
+  const medLinks = [
+    { name: 'インターネットからの処方箋受付', href: '/' },
+    { name: 'LINEでの処方箋受付について', href: '/line' },
+  ]
+  const pharmacistLinks = [
+    { name: '薬剤師教育について', href: '/making' },
+    { name: '薬剤師　在宅訪問', href: '/interview' },
+  ]
+  const otherLinks = [
+    { name: 'BLOG', href: '/blog' },
+    { name: 'ジェネリック医薬品について', href: '/generic' },
+    { name: 'プライバシーポリシー', href: '/' },
+  ]
+
   return (
     <div className={styles.footer}>
       <div className={styles.footerContainer}>
@@ -24,31 +45,14 @@ const Footer = () => {
         </div>
         <div className={styles.columnsContainer}>
           <div className={styles.firstColumn}>
-            <p className={styles.title}>ライジンググループのお店作り</p>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>調剤薬局の特徴</li>
-              <li className={styles.listItem}>お店作りについて</li>
-              <li className={styles.listItem}>健康サポート薬局について</li>
-              <li className={styles.listItem}>災害発生時の体制</li>
-            </ul>
-            <p className={styles.secondTitle}>処方箋受付について</p>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>インターネットからの処方箋受付</li>
-              <li className={styles.listItem}>LINEでの処方箋受付について</li>
-            </ul>
+            <FooterLinkList title="ライジンググループのお店作り" links={shopCreationLinks} />
+            <div className={styles.space}/>
+            <FooterLinkList title="処方箋受付について" links={medLinks} />
           </div>
           <div className={styles.secondColumn}>
-            <p className={styles.title}>薬剤師について</p>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>薬剤師教育について</li>
-              <li className={styles.listItem}>薬剤師　在宅訪問</li>
-            </ul>
-            <p className={styles.secondTitle}>その他</p>
-            <ul className={styles.list}>
-              <li className={styles.listItem}>BLOG</li>
-              <li className={styles.listItem}>ジェネリック医薬品について</li>
-              <li className={styles.listItem}>プライバシーポリシー</li>
-            </ul>
+            <FooterLinkList title="薬剤師について" links={pharmacistLinks} />
+            <div className={styles.space}/>
+            <FooterLinkList title="その他" links={otherLinks} />
           </div>
           <div className={styles.thirdColumn}>
             <p className={styles.title}>薬局一覧</p>
