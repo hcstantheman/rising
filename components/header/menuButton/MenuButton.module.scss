@@ -6,6 +6,7 @@
   width: 88px;
   height: 88px;
   border-radius: 44px;
+  position: relative;
   background-color: #FFFFFF;
 }
 .barContainer {
@@ -13,7 +14,7 @@
   flex-direction: column;
   align-items: flex-end;
   margin-top: 4px;
-
+  position: relative;
 }
 
 .bar {
@@ -35,3 +36,21 @@
   line-height: normal;
   letter-spacing: 2.8px;
 }
+
+.topBarExit,
+.bottomBarExit {
+  // Increase the length of the bars by scaling them
+  // Adjust the scale value as necessary to get the desired length
+  transform: scale(1.28) translateY(9px) rotate(45deg);
+}
+
+.bottomBarExit {
+  // Ensure the bottom bar moves in the opposite direction
+  transform: scale(1.28) translateY(-9px) rotate(-45deg);
+}
+
+// Hide the middle bar
+.middleBarExit {
+  transform: scale(0);
+}
+

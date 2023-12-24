@@ -1,11 +1,17 @@
-import React from "react"
-import styles from './Header.module.scss'
-import MenuButton from "./menuButton/MenuButton";
-import Image from 'next/image'
+import React, { useState } from "react";
+import styles from './Header.module.scss';
+import MenuButton from "./menuButton/MenuButton"; // Correct the path if necessary
+import Image from 'next/image';
+import HamburgerMenu from "../common/Hamburger"; // Correct the path if necessary
+
 interface HeaderProps {
   text: string;
 }
+
 const Header: React.FC<HeaderProps> = ({ text }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
     <div className={styles.header}>
       <div className={styles.logoIconContainer}>
@@ -16,11 +22,13 @@ const Header: React.FC<HeaderProps> = ({ text }) => {
           height={54}
           className={styles.icon}
         />
-        <MenuButton/>
+        {/* MenuButton with the onClick event handler */}
+        <MenuButton onClick={toggleMenu}/>
       </div>
       <div className={styles.dynamicText}>{text}</div>
+      <HamburgerMenu isOpen={isMenuOpen} toggleMenu={toggleMenu}/>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
