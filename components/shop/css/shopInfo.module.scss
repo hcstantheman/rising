@@ -13,6 +13,7 @@
     letter-spacing: 3.2px;
 }
 
+
 .infoContainer{
     width: 70%;
     margin: 0 auto;
@@ -80,5 +81,16 @@
         .nearbyText{
             @extend .contentFont;
         }
+    }
+}
+@media (max-width: 768px) { // Adjust this breakpoint as needed
+    .infoContainer {
+        flex-direction: column; // Stack the children vertically on smaller screens
+        padding: 25px; // Adjust padding for smaller screens
+    }
+
+    .leftContainer,
+    .rightContainer {
+        width: 100%;
     }
 }
