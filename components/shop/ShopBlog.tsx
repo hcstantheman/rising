@@ -25,7 +25,7 @@ const ShopBlog: React.FC = () => {
           <Link href={`/blog/${post.id}`} key={post.id} className={styles.postLink}>
             <BlogCard
               title={post.title.rendered}
-              date={new Date(post.date).toLocaleDateString('ja-JP')}
+              date={new Date(post.date).toLocaleDateString('ja-JP').replace(/\//g, '.')}
               location='まさむね薬局'
               img={post.imageUrl}
             />

@@ -92,7 +92,7 @@ const Blog: React.FC = () => {
             <Link href={`/blog/${post.id}`} key={post.id} className={styles.postLink}>
                 <BlogCard
                   title={post.title.rendered}
-                  date={new Date(post.date).toLocaleDateString('ja-JP')}
+                  date={new Date(post.date).toLocaleDateString('ja-JP').replace(/\//g, '.')}
                   location={post.tags.length > 0 ? post.tags[0].name : '薬局'}
                   img={post.imageUrl}
                 />

@@ -1,0 +1,22 @@
+.arrowButton {
+    cursor: pointer;
+    display: inline-block; // Ensures the div doesn't take full width
+
+    &:hover .ellipse {
+        fill: white; // Change the ellipse fill on hover
+    }
+
+    &:hover .arrowPath {
+        stroke: #FBDF97; // Change the arrow path stroke on hover
+    }
+
+    .ellipse {
+        fill: #FBDF97; // Initial fill color for the ellipse
+        transition: ease-out 0.5s; // Smooth transition for fill
+    }
+
+    .arrowPath {
+        stroke: white; // Initial stroke color for the arrow path
+        transition: ease-out 1.5s; // Smooth transition for stroke
+    }
+}

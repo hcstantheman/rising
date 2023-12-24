@@ -1,0 +1,35 @@
+.outerContainer{
+    display: flex;
+    border-bottom : 1px solid #828282;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 130px;
+}
+
+.contentContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 123px;
+    color: #6D6D6D;
+    font-family: YuGothic;
+    font-size: 14px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    gap:32px;
+}
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 20px;
+    border-radius: 5px;
+    background: #FBDF97;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+.title{
+    font-size: 16px;
+}

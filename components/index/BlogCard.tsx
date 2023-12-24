@@ -1,21 +1,29 @@
-// BlogCard.js
 import React from 'react';
-import {Post} from "../../type/PostProps";
 import styles from './css/blogCard.module.scss';
+import IndexArrowButton from "./IndexArrow";
+import {useRouter} from "next/router";
+import StyleButton from "../common/StyleButton";
 
-type BlogCardProps = {
-  post: Post;
-};
 
-const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
-  // Extract the necessary data from the post object
-  const { date, title, tag } = post; // Adjust based on how the data is structured
+const BlogCard: React.FC<{ post: any }> = ({ post }) => {
+  const router = useRouter();
+  const navigateToPost = () => {
+    router.push(`/blog/${post.id}`); // Navigate to the blog post page
+  };
 
   return (
-    <div className={styles.container}>
-      <h2>{title.rendered}</h2> {/* Adjust if your title is structured differently */}
-      <p>{new Date(date).toLocaleDateString()}</p> {/* Format the date as you like */}
-      <p>{tag}</p> {/* Assuming tag is a string; adjust if it's structured differently */}
+    <div className={styles.outerContainer}>
+      <div className={styles.contentContainer}>
+        <p className={styles.date}>
+          {new Date(post.date).toLocaleDateString()
+            .replace(/\//g, '.')}
+        </p>
+        <div className={styles.tag} key={post.tags[0].id}>{post.tags[0].name}</div>
+        <p className={styles.title}>{post.title.rendered}</p>
+      </div>
+      <div className={styles.arrowButton} onClick={navigateToPost}>
+        <IndexArrowButton/>
+      </div>
 
     </div>
   );
