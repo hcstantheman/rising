@@ -5,7 +5,6 @@ import Image from "next/image";
 import pinLocations from "../../const/location"
 
 const IndexLocation: React.FC = () => {
-  console.log(pinLocations)
   return (
     <div className={styles.container}>
       <p className={styles.title}>店舗所在</p>
