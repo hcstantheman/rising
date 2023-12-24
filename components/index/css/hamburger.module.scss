@@ -1,0 +1,64 @@
+.menu {
+    color: #8A9491;
+    text-align: center;
+    font-family: Corporate Logo ver3;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 5.2px;
+    position: fixed;
+    top: 0;
+    right: -24%;
+    width: 24%; /* Width of the menu */
+    height: 100%;
+    background-color: #fff; /* or any color you prefer */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease;
+}
+.title{
+    margin-top:33px;
+    height:45px;
+}
+
+.menu.open {
+    right: 0; /* Brings the menu on-screen */
+}
+.menuItem {
+    display: block; /* or inline-block depending on your layout */
+    position: relative;
+    height: 48px; /* Adjust as needed to fit text and SVG */
+    text-decoration: none;
+    padding: 12px;
+    color: #5D6865;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 3.6px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.textWrapper {
+    position: relative;
+    height: 32px; /* Height of your text */
+    line-height: 32px; /* Aligns text vertically */
+    z-index: 10;
+}
+
+.svgWrapper {
+    position: absolute;
+    bottom: 2px; /* 2px atop of the bottom of the SVG */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 153px;
+    height: 16px;
+    background-image: url('/img/menu-hover.svg');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s; /* Smooth transition for the hover effect */
+}
+
+.menuItem:hover .svgWrapper {
+    opacity: 1;
+    z-index: -100;
+}

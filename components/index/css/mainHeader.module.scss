@@ -1,0 +1,29 @@
+.container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 5px 5px 0px rgba(94, 174, 210, 0.50) inset;
+
+}
+
+.logo{
+    width: 291px;
+    height: 49px;
+    margin-left: 33px;
+}
+.optionContainer{
+    display: flex;
+    margin-left: 100px;
+    gap: 40px;
+    .option, .hamburger{
+        color: #5D6865;
+        font-family: Corporate Logo ver3;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 3.6px;
+        text-decoration: none;
+    }
+}
+
