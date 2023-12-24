@@ -1,4 +1,4 @@
-const menuOptions = [
+const indexBranches = [
   { path:'/masamune', label: 'まさむね薬局' },
   { path:'/', label: 'ホワイト薬局' },
   { path:'/', label: '秀英薬局' },
@@ -15,4 +15,4 @@ const menuOptions = [
   { path:'/',  label: 'はすの実薬局' }
 ];
 
-export default menuOptions;
+export default indexBranches;

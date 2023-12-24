@@ -1,6 +1,6 @@
 // HamburgerMenu.tsx
 import React from 'react';
-import menuOptions from "../../const/menuBranch";
+import indexBranches from "../../const/menuBranch";
 import styles from './css/hamburger.module.scss';
 
 type Props = {
@@ -11,7 +11,7 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen }) => {
   return (
     <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
       <p className={styles.title}>調剤薬局一覧</p>
-    {menuOptions.map((item, index) => (
+    {indexBranches.map((item, index) => (
       <a key={index} href={item.path} className={styles.menuItem}>
         <div className={styles.optionWrapper}>
           <p>{item.label}</p>

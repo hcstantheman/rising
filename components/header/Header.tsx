@@ -2,11 +2,9 @@ import React from "react"
 import styles from './Header.module.scss'
 import MenuButton from "./menuButton/MenuButton";
 import Image from 'next/image'
-
 interface HeaderProps {
   text: string;
 }
-
 const Header: React.FC<HeaderProps> = ({ text }) => {
   return (
     <div className={styles.header}>

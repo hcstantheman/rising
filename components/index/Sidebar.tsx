@@ -1,11 +1,11 @@
 import React from 'react';
-import menuOptions from "../../const/menuBranch";
+import indexBranches from "../../const/menuBranch";
 import styles from './css/sidebar.module.scss';
 
 const Sidebar: React.FC = () => {
   return (
     <div className={styles.sidebar}>
-      {menuOptions.map((item, index) => (
+      {indexBranches.map((item, index) => (
         <a key={index} href={item.path} className={styles.menuItem}>
           <div className={styles.optionWrapper}>
             <p>{item.label}</p>
