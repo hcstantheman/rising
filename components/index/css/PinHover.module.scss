@@ -1,0 +1,35 @@
+.container{
+    position: absolute; // Position the container absolutely
+    width: 350px;
+    transform: translate(-46%, calc(-100% - 70px)); // Adjust this to position the hover box above the pin
+    z-index: 100; // Ensure it's above other elements
+}
+
+.content{
+    background: #B2D8E9CC;
+    height: 282px;
+    padding: 34px 43px;
+    border-radius: 40px;
+    color: #000;
+    font-family: YuGothicBold;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+}
+.name{
+    margin-top: 6px;
+}
+.address{
+    margin-top: 10px;
+    font-family: YuGothic;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+}
+.noImage{
+    height: 200px;
+    background: grey;
+}
+.triangle{
+margin : -1px auto 0;
+}

@@ -4,6 +4,7 @@ import MainContent from "../components/index/MainContent";
 import styles from './css/index.module.scss';
 import IndexLocation from "../components/index/Location";
 import IndexBlog from "../components/index/IndexBlog";
+import Footer from "../components/footer/Footer";
 
 
 const Home: React.FC = () => {
@@ -13,6 +14,8 @@ const Home: React.FC = () => {
       <MainContent/>
       <IndexBlog/>
       <IndexLocation/>
+      <div className={styles.space}/>
+      <Footer/>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 .container{
     width: 100%;
-    height: 100vh;
     position: relative; // Add this to position your pins relative to the container
 }
 
@@ -35,4 +34,9 @@
     z-index: 2; // Higher than the background
     width: 40px; // Adjust as necessary
     height: 40px; // Adjust as necessary
+    transition: transform 0.3s; // Smooth transition for scaling
+    &.hovered {
+        transform: translate(-50%, -50%) scale(1.3); // Scale up when hovered
+    }
 }
+
