@@ -1,0 +1,38 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative; // Add this to position your pins relative to the container
+}
+
+.title {
+    margin: 64px 0;
+    color: #5D6865;
+    font-family: Corporate Logo ver3;
+    text-align: center;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 5.2px;
+}
+
+.map {
+    position: relative; // Essential for positioning pins
+    width: 90%; // Adjust if necessary
+    height: auto; // Keep the aspect ratio of the background
+    margin: 0 auto; // Center the map
+}
+
+.bg{
+    width: 100%;
+    height: auto; // Maintain aspect ratio
+    z-index: 1; // Ensure this is below the pins
+}
+
+.pin {
+    position: absolute; // Absolute positioning within the map container
+    transform: translate(-50%, -50%); // Center the pin on coordinates
+    z-index: 2; // Higher than the background
+    width: 40px; // Adjust as necessary
+    height: 40px; // Adjust as necessary
+}
