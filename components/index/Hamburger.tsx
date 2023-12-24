@@ -13,8 +13,8 @@ const HamburgerMenu: React.FC<Props> = ({ isOpen }) => {
       <p className={styles.title}>調剤薬局一覧</p>
     {menuOptions.map((item, index) => (
       <a key={index} href={item.path} className={styles.menuItem}>
-        <div className={styles.textWrapper}>
-          {item.label}
+        <div className={styles.optionWrapper}>
+          <p>{item.label}</p>
           <div className={styles.svgWrapper}></div>
         </div>
       </a>

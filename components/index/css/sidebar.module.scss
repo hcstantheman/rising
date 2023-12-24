@@ -1,4 +1,4 @@
-.menu {
+.sidebar {
     color: #8A9491;
     text-align: center;
     font-family: Corporate Logo ver3;
@@ -7,20 +7,10 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 5.2px;
-    position: fixed;
-    top: 0;
-    right: -24%;
-    width: 24%; /* Width of the menu */
+    width: 24%;
     height: 100%;
-    background-color: #fff; /* or any color you prefer */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: right 0.5s ease;
+    background-color: #fff;
 }
-.title{
-    margin-top:33px;
-    height:45px;
-}
-
 .menu.open {
     right: 0; /* Brings the menu on-screen */
 }
