@@ -19,7 +19,7 @@ const Health: React.FC = () => {
       </p>
       <div className={styles.explain}>
         <p className={styles.title}>健康サポート薬局とは?</p>
-        <DottedLine numDots={57}/>
+        <div className={styles.dotLine}><DottedLine numDots={57}/></div>
         <div className={styles.explainContent}>
           <Image
             src={'/img/health-explain.png'} alt={'logo'} width={268} height={315}
@@ -70,7 +70,7 @@ const Health: React.FC = () => {
       </div>
       <div className={styles.branch}>
         <p className={styles.title}>ライジンググループの健康サポート薬局</p>
-        <DottedLine numDots={85}/>
+        <div className={styles.dotLine}> <DottedLine numDots={85}/></div>
         <div className={styles.branchContent}>
           <div className={styles.box}>
             <Image

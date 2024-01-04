@@ -19,6 +19,10 @@
     letter-spacing: 6px;
     margin-bottom: 23px;
 }
+.dotLine{
+    display: flex;
+    justify-content: center;
+}
 .explain{
     @extend .font;
     margin: 104px auto 0;

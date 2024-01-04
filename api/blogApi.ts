@@ -1,8 +1,9 @@
 import axios from 'axios';
 import {Post} from "../type/PostProps";
 import parse from "node-html-parser";
+import nextConfig from "../next.config";
 
-const BASE_URL = 'https://rising.local/wp-json/wp/v2';
+const BASE_URL = 'https://rising-stanley.local/wp-json/wp/v2';
 
 export const fetchAllPostIds = async () => {
   const url = `${BASE_URL}/posts?_embed&fields=id`;  // Adjust the URL to fetch only IDs

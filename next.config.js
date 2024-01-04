@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['rising.local'], // Add your WordPress domain here
+        domains: ['rising-stanley.local'], // Add your WordPress domain here
     },
 }
 
