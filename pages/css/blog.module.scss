@@ -15,9 +15,13 @@
   grid-gap: 56px; /* Spacing between grid items */
   justify-items: center; /* Center grid items horizontally */
   align-items: center; /* Center grid items vertically */
+  @media (max-width: 860px) {
+    grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    align-items: center;
+  }
   .postLink{
-    text-decoration: none; // Remove underline from links
-    color: inherit; // Keep the text color consistent
+    text-decoration: none;
+    color: inherit;
   }
 }
 
@@ -26,6 +30,9 @@
   display: flex;
   list-style-type: none;
   justify-content: center;
+  @media (max-width: 860px) {
+    margin-bottom: 100px;
+  }
   li {
     margin: 0 12px;
     a {
