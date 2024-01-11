@@ -12,10 +12,18 @@ import StyleButton from "../../components/common/StyleButton";
 const Post = () => {
   const [post, setPost] = useState<PostType | null>(null);
   const router = useRouter();
+  const [mobile, setMobile] = useState(false);
   const { postId } = router.query;
-
+  const [numDots, setNumDots] = useState(0);
 
   useEffect(() => {
+    const handleResize = () => {
+      setNumDots(window.innerWidth <= 768 ? 45 : 134);
+      setMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
     const id = Array.isArray(postId) ? postId[0] : postId;
 
     if (id) {
@@ -25,6 +33,7 @@ const Post = () => {
         console.error('Error fetching post:', error);
       });
     }
+    return () => window.removeEventListener('resize', handleResize);
   }, [postId]);
 
 
@@ -45,14 +54,16 @@ const Post = () => {
     <div>
       <Header text={''}/>
       <div className={styles.blogHeader}>
-        <p className={styles.title}>{post.title.rendered}</p>
+        <div className={styles.titleContainer}>
+          <p className={styles.title}>{post.title.rendered}</p>
+        </div>
         <div className={styles.rightContainer}>
           <p className={styles.location}>{post.tag}</p>
           <p className={styles.date}>{new Date(post.date).toLocaleDateString().replace(/\//g, '.')}</p>
         </div>
       </div>
       <div className={styles.line}>
-        <DottedLine numDots={134}/>
+        <DottedLine numDots={numDots}/>
       </div>
       <Slider {...settings}>
         {post.images && post.images.map((imageUrl, index) => (
@@ -67,7 +78,7 @@ const Post = () => {
         ))}
         <div className={styles.buttonContainer}>
           {post.prevPostId && <StyleButton text={'＜　前の記事へ'} to={`/blog/${post.prevPostId}`}/>}
-          <StyleButton text={'一覧へ戻る'} to={'/blog'}/>
+          {mobile ? null : <StyleButton text={'一覧へ戻る'} to={'/blog'}/> }
           {post.nextPostId && <StyleButton text={'次の記事へ　＞'} to={`/blog/${post.nextPostId}`}/>}
         </div>
       </div>

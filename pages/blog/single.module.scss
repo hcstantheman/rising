@@ -68,3 +68,27 @@
     justify-content: space-between;
   }
 }
+
+@media (max-width: 860px){
+  .blogHeader {
+    display: flex;
+    flex-direction: column;
+    .title{
+      width:100%;
+    }
+  }
+  .titleContainer{
+    margin-left: 20px;
+  }
+
+  .rightContainer{
+    justify-content: flex-end;
+  }
+  .contentContainer{
+    margin: 50px 0;
+    padding-bottom: 100px;
+    p{
+      padding-bottom: 50px;
+    }
+  }
+}
