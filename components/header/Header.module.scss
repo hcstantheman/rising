@@ -29,5 +29,11 @@
     font-weight: 700;
     line-height: normal;
     letter-spacing: 8px;
+    @media (max-width: 860px) {
+        text-align: left;
+      padding: 20px;
+        font-size: 32px;
+        letter-spacing: 6.4px;
+    }
   }
 }

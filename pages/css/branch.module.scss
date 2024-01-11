@@ -1,5 +1,12 @@
 .legend{
     margin: 104px 0 188px 192px;
+    @media (max-width: 860px) {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 50px;
+    }
 }
 .cardholderContainer{
     display: grid;
@@ -7,4 +14,11 @@
     gap: 56px 48px; /* 56px vertical gap, 48px horizontal gap */
     margin: 0 auto; /* Margin on all sides */
     max-width: 1252px;
+    @media (max-width: 860px) {
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        width: 100%;
+        gap: 48px;
+        margin-bottom: 100px;
+    }
 }

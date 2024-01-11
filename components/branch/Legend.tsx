@@ -5,7 +5,7 @@ import SingleLegend from "./SingleLegend";
 
 const Legend: React.FC = () => {
   return (
-    <div className={styles.legendContainer}>
+    <div className={styles.container}>
       <p className={styles.title}>マークについてのご説明</p>
       <DottedLine numDots={35}/>
       <div className={styles.iconsContainer}>

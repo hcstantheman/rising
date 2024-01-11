@@ -16,7 +16,7 @@ const Branch: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className={styles.container}>
       <Header text='薬局一覧' />
       <div className={styles.legend}>
         <Legend/>

@@ -18,5 +18,20 @@
     .secondRow{
         margin-top: 32px;
     }
-
+}
+@media (max-width: 860px) {
+    .container{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .iconsContainer, .firstRow, .secondRow{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .secondRow{
+        margin: 0;
+    }
 }
