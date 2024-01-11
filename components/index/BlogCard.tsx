@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './css/blogCard.module.scss';
 import IndexArrowButton from "./IndexArrow";
 import {useRouter} from "next/router";
-import StyleButton from "../common/StyleButton";
 
 
 const BlogCard: React.FC<{ post: any }> = ({ post }) => {

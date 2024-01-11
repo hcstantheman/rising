@@ -3,7 +3,6 @@ import styles from './css/mainContent.module.scss';
 import MainHeader from "./MainHeader";
 import Sidebar from "./Sidebar";
 import Image from "next/image";
-import MenuButton from "../header/menuButton/MenuButton";
 
 const MainContent: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
