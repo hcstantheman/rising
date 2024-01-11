@@ -7,3 +7,27 @@
 .img{
     width: 77%;
 }
+.hamburgerMenu{
+    display: none;
+}
+
+@media (max-width: 840px) {
+    .container {
+        .sidebarClass {
+            display: none;
+        }
+        .mainHeaderClass {
+            display: none;
+        }
+    }
+    .img{
+        width: 100%;
+    }
+    .hamburgerMenu {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        z-index: 100;
+        display: block;
+    }
+}
