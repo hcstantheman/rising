@@ -14,7 +14,7 @@
     .logo {
         position: absolute;
         top: 50%;
-        left: 45%;
+        left: 50%;
         transform: translate(-50%, -50%);
         animation: enlarge 1.5s ease-in-out forwards;
         z-index: 10;
@@ -25,6 +25,19 @@
         transform: translate(-50%, -50%) scale(0.5); // Start at half size
     }
     to {
-        transform: translate(-50%, -50%) scale(3); // Scale to full size
+        transform: translate(-50%, -50%) scale(1); // Scale to full size
+    }
+}
+@media (max-width: 860px) {
+    .bgContainer {
+        .background {
+            width: 90%;
+            height: 500px;
+        }
+        .logo {
+            width: 60vw; // Adjust the logo size for smaller screens
+            height: 10vh;
+            transform: translate(-50%, -50%) scale(1); // Adjust position and scaling
+        }
     }
 }
