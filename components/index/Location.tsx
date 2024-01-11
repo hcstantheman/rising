@@ -19,12 +19,15 @@ const IndexLocation: React.FC = () => {
             //@ts-ignore
             onMouseEnter={() => setHoveredPin(index)}
             onMouseLeave={() => setHoveredPin(null)}
+            //@ts-ignore
+            onClick={() => setHoveredPin(index)}
           >
             <Image
               src={hoveredPin === index ? '/img/index-location-active.svg' : '/img/index-location-inactive.svg'}
               alt={`${pin.name} location`}
               width={55}
               height={55}
+              className={styles.pinImg}
             />
             {hoveredPin === index && <PinHover name={pin.name} address={pin.address}/>}
           </div>

@@ -7,7 +7,6 @@ import IndexBlog from "../components/index/IndexBlog";
 import Footer from "../components/footer/Footer";
 import MenuButton from "../components/header/menuButton/MenuButton";
 
-
 const Home: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -15,7 +14,7 @@ const Home: React.FC = () => {
   return (
     <div className={styles.container}>
       <Background/>
-      { isMobile && <div className={styles.hamburgerMenu}><MenuButton onClick={toggleMenu}/></div> }
+      {/*{ isMobile && <div className={styles.hamburgerMenu}><MenuButton onClick={toggleMenu}/></div> }*/}
       <MainContent/>
       <IndexBlog/>
       <IndexLocation/>
