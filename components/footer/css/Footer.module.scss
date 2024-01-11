@@ -60,13 +60,21 @@
         padding:0;
     }
     .logoAddressContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
         width: 100%;
         .icon{
+            display: flex;
             margin-top: 48px;
+            align-items: center;
         }
         .addressContainer{
             padding: 79px 0;
-            text-align: center;
         }
+    }
+    .linksContainer{
+        order: 1;
     }
 }

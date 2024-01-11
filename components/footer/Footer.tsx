@@ -22,7 +22,9 @@ const Footer = () => {
             <div className={styles.address}>住所〒754-0002 山口県山口市小郡下郷842-9</div>
           </div>
         </div>
-        <Links/>
+        <div className={styles.linksContainer}>
+          <Links/>
+        </div>
       </div>
       <p className={styles.copyright}>©株式会社ライジングホールディングス</p>
     </div>
