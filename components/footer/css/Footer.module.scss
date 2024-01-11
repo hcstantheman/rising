@@ -48,65 +48,8 @@
         }
     }
 }
-.columnsContainer{
-    margin-left: 61px;
-    display: inline-flex;
-    justify-content: space-between;
-    gap:40px;
-
-    .firstColumn{
-        width: 314px;
-    }
-    .secondColumn{
-        width: 233px;
-    }
-    .thirdColumn{
-        width: 245px;
-    }
-    .title{
-        @extend .boldWord;
-        margin-bottom: 16px;
-    }
-    .list{
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-top: 16px;
-        list-style-type: none;
-        li{
-            @extend .word;
-        }
-    }
-    .secondTitle{
-        @extend .title;
-        margin-top: 24px;
-    }
-}
-
-.doubleList {
-    list-style-type: none;
-    column-count: 2;
-    column-gap: 32px;
-    margin-top: 16px;
-    padding: 0;
-    li{
-        @extend .word;
-        margin-bottom: 8px;
-    }
-    li:last-child {
-        margin-bottom: 0;
-    }
-}
 .copyright{
     text-align: center;
     @extend .word;
     font-size: 14px;
-}
-
-.link{
-    text-decoration: none;
-    color: inherit;
-}
-.space{
-    height: 24px;
 }

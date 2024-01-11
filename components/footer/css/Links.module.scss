@@ -1,0 +1,19 @@
+.columnsContainer{
+  margin-left: 61px;
+  display: inline-flex;
+  justify-content: space-between;
+  gap:40px;
+
+  .firstColumn{
+    width: 314px;
+  }
+  .secondColumn{
+    width: 233px;
+  }
+  .thirdColumn{
+    width: 245px;
+  }
+}
+.space{
+  height: 24px;
+}
