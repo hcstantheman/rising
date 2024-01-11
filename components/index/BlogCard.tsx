@@ -14,17 +14,18 @@ const BlogCard: React.FC<{ post: any }> = ({ post }) => {
   return (
     <div className={styles.outerContainer}>
       <div className={styles.contentContainer}>
-        <p className={styles.date}>
-          {new Date(post.date).toLocaleDateString()
-            .replace(/\//g, '.')}
-        </p>
-        <div className={styles.tag} key={post.tags[0].id}>{post.tags[0].name}</div>
+        <div className={styles.dateTag}>
+          <p className={styles.date}>
+            {new Date(post.date).toLocaleDateString()
+              .replace(/\//g, '.')}
+          </p>
+          <div className={styles.tag} key={post.tags[0].id}>{post.tags[0].name}</div>
+        </div>
         <p className={styles.title}>{post.title.rendered}</p>
       </div>
       <div className={styles.arrowButton} onClick={navigateToPost}>
         <IndexArrowButton/>
       </div>
-
     </div>
   );
 };

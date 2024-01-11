@@ -1,9 +1,12 @@
 .outerContainer{
     display: flex;
-    border-bottom : 1px solid #828282;
+    border-bottom: 1px solid #828282;
     justify-content: space-between;
     align-items: center;
     padding: 0 130px;
+    @media (max-width: 860px) {
+        padding: 0;
+    }
 }
 
 .contentContainer{
@@ -17,7 +20,18 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: 0.7px;
-    gap:32px;
+    gap: 32px;
+
+    @media (max-width: 860px) {
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: flex-start; // Align items to start
+        height: auto; // Adjust height for content
+    }
+}
+.dateTag{
+    display: flex;
+    gap: 32px;
 }
 .tag{
     display: flex;
@@ -30,6 +44,7 @@
     font-size: 10px;
     letter-spacing: 0.5px;
 }
+
 .title{
     font-size: 16px;
 }
