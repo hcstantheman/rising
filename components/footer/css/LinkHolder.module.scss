@@ -49,3 +49,16 @@
     text-decoration: underline;
   }
 }
+
+@media (max-width: 860px){
+  .title{
+    text-align: center;
+  }
+  .list{
+    text-align: center;
+  }
+  .doubleList{
+    column-count: 1;
+    text-align: center;
+  }
+}

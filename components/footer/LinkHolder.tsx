@@ -13,7 +13,7 @@ interface Props {
 
 const LinkHolder: React.FC<Props> = ({ title, links, twoColumn}) => {
   return (
-    <div className={styles.linkSection}>
+    <div className={styles.container}>
       <p className={styles.title}>{title}</p>
       { !twoColumn?
         <ul className={styles.list}>

@@ -17,3 +17,21 @@
 .space{
   height: 24px;
 }
+
+@media (max-width: 860px){
+  .columnsContainer{
+    margin-left: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    .firstColumn{
+      width: 100%;
+    }
+    .secondColumn{
+      width: 100%;
+    }
+    .thirdColumn{
+      width: 100%;
+    }
+  }
+}

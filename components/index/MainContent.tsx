@@ -6,10 +6,7 @@ import Image from "next/image";
 import MenuButton from "../header/menuButton/MenuButton";
 
 const MainContent: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 480);
@@ -34,7 +31,6 @@ const MainContent: React.FC = () => {
         width={1107} height={800}
         className={styles.img}/>
         { !isMobile && <Sidebar/> }
-        { isMobile && <div className={styles.hamburgerMenu}><MenuButton onClick={toggleMenu}/></div> }
       </div>
     </div>
   )

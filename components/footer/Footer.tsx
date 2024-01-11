@@ -1,8 +1,6 @@
 import React from 'react';
 import styles from './css/Footer.module.scss';
 import Image from "next/image";
-import LinkHolder from './LinkHolder';
-import {branchLinks, medLinks, otherLinks, pharmacistLinks, shopCreationLinks} from "../../const/footerLink";
 import Links from "./Links";
 
 const Footer = () => {
