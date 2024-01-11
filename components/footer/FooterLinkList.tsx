@@ -9,13 +9,15 @@ interface Props {
     name: string;
     href: string;
   }[];
+  twoColumn?: boolean;
 }
 
-const FooterLinkList: React.FC<Props> = ({ title, links }) => {
+const FooterLinkList: React.FC<Props> = ({ title, links, twoColumn}) => {
   return (
     <div className={styles.linkSection}>
       <p className={styles.title}>{title}</p>
-      <ul className={styles.list}>
+      { !twoColumn?
+        <ul className={styles.list}>
         {links.map((link, index) => (
           <li key={index} className={styles.listItem}>
             <Link href={link.href} className={styles.link}>
@@ -24,6 +26,17 @@ const FooterLinkList: React.FC<Props> = ({ title, links }) => {
           </li>
         ))}
       </ul>
+        :
+        <ul className={styles.doubleList}>
+          {links.map((link, index) => (
+            <li key={index} className={styles.listItem}>
+              <Link href={link.href} className={styles.link}>
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      }
     </div>
   );
 };
