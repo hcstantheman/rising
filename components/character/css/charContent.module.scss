@@ -45,3 +45,47 @@ $refWidth: 404px;
         left: calc($refWidth + 602px);
     }
 }
+@media (max-width: 860px) {
+    .container {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+
+        .firstImage, .secondImage, .thirdImage, .fourthImage,
+        .fifthImage, .sixthImage, .secondCard, .thirdCard {
+            position: static;
+            top: 0;
+            left: 0;
+            margin-left: 0;
+
+        }
+
+        .secondImage, .fourthImage, .sixthImage {
+            display: none;
+        }
+
+        .firstImage {
+            order: 1;
+        }
+        .firstCard{
+            order: 2;
+        }
+        .thirdImage{
+            order: 3;
+        }
+        .secondCard{
+            order: 4;
+        }
+        .fifthImage{
+            order: 5;
+        }
+        .thirdCard{
+            order: 6;
+        }
+
+
+
+    }
+}

@@ -15,7 +15,7 @@ const CharContent: React.FC = () => {
   return(
     <AnimatePresence>
     <div className={styles.container}>
-      <motion.div {...animationSettings}>
+      <motion.div {...animationSettings} className={styles.firstCard}>
         <CharCard
           title={'山口県内に店舗数が豊富'}
           line1={'2024年1月現在、山口県内に17店舗を構えております。'}

@@ -7,7 +7,7 @@ import CharContent from "../components/character/charContent";
 
 const Character: React.FC = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <Header text={'ライジンググループの特徴'}/>
         <div className={styles.introBox}>
           <div>
