@@ -6,11 +6,13 @@
     line-height: 30px; /* 187.5% */
     letter-spacing: 3.2px;
 }
-
 .intro{
     @extend .font;
     margin: 37px 0 0 182px;
     max-width: 659px;
+    @media (max-width: 680px) {
+        margin: 37px 0 0 25px;
+    }
 }
 .title{
     font-family: YuGothicBold;
@@ -18,6 +20,10 @@
     line-height: 30px;
     letter-spacing: 6px;
     margin-bottom: 23px;
+    @media (max-width: 860px) {
+        font-size: 25px;
+        text-align: center;
+    }
 }
 .dotLine{
     display: flex;
@@ -32,6 +38,14 @@
         display: flex;
         justify-content: center;
         gap: 80px;
+        @media (max-width: 680px) {
+            flex-direction: column;
+            gap: 20px;
+
+            .explainImage {
+                margin: 20px auto;
+            }
+        }
         .explainText{
             display: flex;
             max-width: 480px;
@@ -47,18 +61,27 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+    @media (max-width: 680px) {
+        margin: 106px 0 0;
+    }
     .title {
         margin-bottom: 28px;
+        @media (max-width: 860px) {
+            font-size: 25px;
+        }
     }
     .grid {
         margin-top: 40px;
         display: grid;
-        grid-template-columns: repeat(3, 1fr); // Three columns with equal width
-        grid-template-rows: repeat(2, auto); // Two rows, height adjusts to content
-        gap: 84px; // 84px gap both vertically and horizontally
-        justify-content: center; // Center the entire grid horizontally
-        align-items: center; // Center the grid items vertically
-        // Add any additional styling needed for the container
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 84px;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 860px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 40px;
+        }
     }
 }
 .branch{
@@ -74,7 +97,23 @@
         justify-content: center;
         gap: 20px;
     }
+    @media (max-width: 860px) {
+        margin: 100px 0;
+        .title{
+            font-size: 25px;
+        }
+        .branchContent {
+            display: flex;
+            overflow-x: auto;
+            justify-content: flex-start;
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+        }
+        .box {
+            flex: 0 0 auto; /* Prevent boxes from shrinking */
+        }
+    }
 }
+
 .greyBackground {
     background-color: grey; // Set to your preferred shade of grey
     width: 300px; // Adjust as needed

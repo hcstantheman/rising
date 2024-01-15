@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import styles from './css/health.module.scss';
@@ -10,6 +10,24 @@ const Health: React.FC = () => {
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.classList.add(styles.greyBackground);
   };
+  const [mobile, setMobile] = useState(false);
+  const [numDots, setNumDots] = useState(0);
+  const [secondNumDots, setSecondNumDots] = useState(0);
+  const [thirdNumDots, setThirdNumDots] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setNumDots(window.innerWidth <= 768 ? 50 : 57);
+      setSecondNumDots(window.innerWidth <= 768 ? 50 : 63);
+      setThirdNumDots(window.innerWidth <= 768 ? 50 : 85);
+      setMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div>
@@ -19,10 +37,11 @@ const Health: React.FC = () => {
       </p>
       <div className={styles.explain}>
         <p className={styles.title}>健康サポート薬局とは?</p>
-        <div className={styles.dotLine}><DottedLine numDots={57}/></div>
+        <div className={styles.dotLine}><DottedLine numDots={numDots}/></div>
         <div className={styles.explainContent}>
           <Image
             src={'/img/health-explain.png'} alt={'logo'} width={268} height={315}
+            className={styles.explainImage}
           />
           <p className={styles.explainText}>
             健康サポート薬局とは、厚生労働大臣が定める一定基準を満たしている薬局として、かかりつけ薬剤師・薬局の機能に加えて、
@@ -33,7 +52,7 @@ const Health: React.FC = () => {
       </div>
       <div className={styles.merit}>
         <p className={styles.title}>健康サポート薬局のメリット</p>
-        <DottedLine numDots={63}/>
+        <div className={styles.dotLine}><DottedLine numDots={secondNumDots}/></div>
         <div className={styles.grid}>
           <Ball
             imageUrl={'/img/health-ball-1.svg'}
@@ -70,7 +89,7 @@ const Health: React.FC = () => {
       </div>
       <div className={styles.branch}>
         <p className={styles.title}>ライジンググループの健康サポート薬局</p>
-        <div className={styles.dotLine}> <DottedLine numDots={85}/></div>
+        <div className={styles.dotLine}> <DottedLine numDots={thirdNumDots}/></div>
         <div className={styles.branchContent}>
           <div className={styles.box}>
             <Image
