@@ -25,12 +25,12 @@ const Confirm: React.FC = () => {
           imageUrl={'/img/confirm-card-1.png'}
           firstWord={'災'} paragraph={'害や新興感染症の発生時等に、医薬品の供給や地域の衛生管理に係る対応等を行う体制を確保します。'}
         />
-        <DottedLine numDots={81} vertical={true}/>
+        <div className={styles.dottedLine}><DottedLine numDots={81} vertical={true}/></div>
         <Cardholder
           imageUrl={'/img/confirm-card-2.png'}
           firstWord={'都'} paragraph={'道府県等の行政機関、地域の医療機関もしくは薬局または関係団体等と適切に連携するため、災害や新興感染症の発生時等における対応に係る地域の協議会または研修等に積極的に参加いたします。'}
         />
-        <DottedLine numDots={81} vertical={true}/>
+        <div className={styles.dottedLine}><DottedLine numDots={81} vertical={true}/></div>
         <Cardholder
           imageUrl={'/img/confirm-card-3.png'}
           firstWord={'災'} paragraph={'害や新興感染症の発生時等に、都道府県から医薬品の供給等について協力の要請があった場合には、地域の関係　機関と連携し、必要な対応を行います。'}

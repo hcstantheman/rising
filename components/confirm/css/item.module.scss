@@ -16,6 +16,10 @@
     margin-left: 32px;
     width: 154px;
 }
+.addressContainer{
+    display: flex;
+    align-items: center;
+}
 .postcode{
     margin-left: 56.1px;
     width:135.9px;
@@ -26,4 +30,27 @@
 }
 .phone{
     margin-left: 56px;
+}
+
+@media (max-width: 860px) {
+    .container{
+        display: block;
+        width: 100%;
+        height: 110px;
+        margin-top: 25px;
+        font-size: 12px;
+        letter-spacing: 2.4px;
+    }
+    .name{
+        font-family: YuGothicBold;
+    }
+    .name, .postcode, .address, .phone {
+        margin-left: 0;
+        width: 100%;
+        height: 30px;
+        display: block;
+    }
+    .addressContainer{
+        display: block;
+    }
 }

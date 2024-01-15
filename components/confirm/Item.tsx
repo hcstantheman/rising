@@ -11,8 +11,10 @@ const Item:  React.FC<Props> = ({ name,postcode, address, phone}) => {
   return (
     <div className={styles.container}>
       <p className={styles.name}>{name}</p>
-      <p className={styles.postcode}>{postcode}</p>
-      <p className={styles.address}>{address}</p>
+      <div className={styles.addressContainer}>
+        <p className={styles.postcode}>{postcode}</p>
+        <p className={styles.address}>{address}</p>
+      </div>
       <p className={styles.phone}>{phone}</p>
     </div>
   )
