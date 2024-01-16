@@ -19,9 +19,9 @@ const Interview: React.FC = () => {
           <Content/>
         </div>
       </div>
-      {/*<div className={styles.discussion}>*/}
-      {/*  <Discussion/>*/}
-      {/*</div>*/}
+      <div className={styles.discussion}>
+        <Discussion/>
+      </div>
       {/*<Charge/>*/}
       <Footer/>
     </div>

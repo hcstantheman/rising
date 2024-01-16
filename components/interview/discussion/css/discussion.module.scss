@@ -7,7 +7,6 @@
 .titleContainer{
     margin:0 320px;
     height: 74px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,6 +21,9 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+    @media (max-width: 860px) {
+        margin:0 20px;
     }
 }
 .cardContainer{
@@ -51,6 +53,23 @@
         line-height: 30px; /* 187.5% */
         letter-spacing: 3.2px;
     }
+    @media (max-width: 860px) {
+        margin: 50px 0 0 50px;
+        border-radius: 40px 0 0 40px;
+        padding: 50px;
+        gap: 50px;
+        flex-direction: column;
+
+        .contentContainer{
+            margin-top: 11px;
+        }
+        .barContainer{
+            margin-top: 32px;
+        }
+        .text{
+            margin-top: 70px;
+        }
+    }
 }
 .firstContainer{
     @extend .cardContainer;
@@ -71,4 +90,21 @@
     .text{
         margin-top: 70px;
     }
+}
+
+@media (max-width: 860px){
+    .secondContainer{
+        margin: 50px 50px 0 0 ;
+        padding: 50px;
+        border-radius: 0 40px 40px 0;
+        display: flex;
+        flex-direction: column;
+        .photo{
+            order: 1;
+        }
+        .contentContainer{
+            order: 2;
+        }
+    }
+
 }

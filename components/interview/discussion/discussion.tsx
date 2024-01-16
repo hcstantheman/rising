@@ -43,9 +43,11 @@ const Discussion: React.FC = () => {
             薬の説明や管理、飲み方の指導などを行います。
           </p>
         </div>
-        <DoublePhoto
-          imageUrl={'/img/interview-discussion-2.png'}
-        />
+        <div className={styles.photo}>
+          <DoublePhoto
+            imageUrl={'/img/interview-discussion-2.png'}
+          />
+        </div>
       </div>
     </div>
   );
