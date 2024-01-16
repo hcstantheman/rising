@@ -6,33 +6,6 @@
     line-height: normal;
     letter-spacing: 6px;
 }
-.pfont {
-    @extend .font;
-    font-family: YuGothic;
-    text-align: center;
-    font-size: 26px;
-    line-height: 40px;
-    letter-spacing: 5.6px;
-}
-.box{
-    position: absolute;
-    left: 25%;
-    transform: translate(-6%);
-    color: #5D6865;
-}
-.title{
-    @extend .box, .pfont;
-    font-size: 28px;
-    font-family: YuGothicBold;
-}
-.content{
-    @extend .box, .pfont;
-    font-size: 20px;
-    line-height: 30px; /* 150% */
-    letter-spacing: 4px;
-    top: 225px;
-}
-
 .serviceText{
     @extend .font;
     margin-left:24px;
@@ -49,22 +22,15 @@
     gap: 24px 20px;
     justify-content: center;
     align-content: center;
-    .step1 { .title{ top: 123px } }
-    .step2 { .title{ top: 123px } }
-    .step3 {
-        .title{ top: 103px }
-        .content{ top: 257px }
-    }
-    .step4 {
-        .title{
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 470px;
-        }
-    }
-    .step1, .step2, .step3, .step4{
+    .step{
         position: relative;
+        .contentContainer{
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 
 }
@@ -74,9 +40,11 @@
         font-size: 20px;
     }
     .meritCardholder{
+        width: 90%;
         height: auto;
         margin: 40px 0 0;
         padding: 20px;
+        gap: 20px;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
