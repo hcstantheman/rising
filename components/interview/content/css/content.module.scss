@@ -22,10 +22,27 @@
     font-family: YuGothicBold;
     font-size: 30px;
     font-style: normal;
-    line-height: 46px; /* 153.333% */
+    line-height: 46px;
     letter-spacing: 6px;
     background: linear-gradient(93deg, #00B0FF 0.8%, #3354C9 99.17%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 860px) {
+    .title{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .cardContainer{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 100px;
+
+    }
+    .endingText{
+        margin-top: 100px;
+        font-size: 20px;
+    }
 }

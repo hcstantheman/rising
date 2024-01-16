@@ -5,7 +5,7 @@ import ContentCardHolder from "./cardholder";
 
 const Content: React.FC = () => {
   return (
-    <div>
+    <div className={styles.container}>
       <p className={styles.title}>在宅訪問のサポート内容</p>
       <DottedLine numDots={54}/>
       <div className={styles.cardContainer}>

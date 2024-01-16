@@ -10,11 +10,18 @@
                 10px -10px 20px 0px rgba(204, 204, 204, 0.20) inset,
                 1px 1px 2px 0px rgba(204, 204, 204, 0.50),
                 -1px -1px 2px 0px rgba(255, 255, 255, 0.30);
-
+    @media (max-width: 860px) {
+        width: 80%;
+        height: 100%;
+        padding: 30px 20px 0;
+    }
 }
 
 .titleContainer{
     padding-top: 56px;
+    @media (max-width: 860px) {
+        padding-top: 0;
+    }
 }
 .title{
     text-align: center;
@@ -41,5 +48,9 @@
         font-weight: 500;
         line-height: 30px; /* 187.5% */
         letter-spacing: 3.2px;
+    }
+    @media (max-width: 860px) {
+        margin: 20px auto 0;
+        max-width: 100%;
     }
 }
