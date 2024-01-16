@@ -10,7 +10,7 @@
 .titleContainer{
     display: inline-flex;
     flex-direction: column;
-    align-items: center; // Center items in this container
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -37,4 +37,19 @@
 }
 .noteContainer{
     margin-top: 24px;
+}
+
+@media (max-width: 860px) {
+    .container{
+        margin-top: 70px;
+        font-size: 25px;
+
+    }
+    .lineContainer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 10px;
+        letter-spacing: 4px;
+    }
 }
