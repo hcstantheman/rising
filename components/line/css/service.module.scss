@@ -14,11 +14,6 @@
     line-height: 40px;
     letter-spacing: 5.6px;
 }
-.icon {
-    position: absolute;
-    z-index: 0;
-    top: 60px;
-}
 .box{
     position: absolute;
     left: 25%;
@@ -45,10 +40,6 @@
     justify-content: center; // Center the grid horizontally if there's extra space
     align-content: center; // Center the grid vertically if there's extra space
     .step1 {
-        .backgroundIcon {
-            @extend .icon;
-            left: 198px;
-        }
         .mainBox{
             @extend .box;
             padding-top: 123px;
@@ -71,11 +62,6 @@
         }
     }
     .step2 {
-        .backgroundIcon2 {
-            @extend .icon;
-            left: 166px;
-            top: 60px;
-        }
         .mainBox{
             @extend .box;
             padding-top: 123px;
@@ -99,11 +85,6 @@
         }
     }
     .step3 {
-        .backgroundIcon3 {
-            @extend .icon;
-            top: 93px;
-            left: 158px;
-        }
         .mainBox{
             @extend .box;
             padding-top: 103px;
@@ -126,11 +107,6 @@
         }
     }
     .step4 {
-        .backgroundIcon4 {
-            @extend .icon;
-            top: 69px;
-            left: 143px;
-        }
         .mainBox{
             @extend .box;
             top: 50%;
@@ -148,4 +124,17 @@
         position: relative;
     }
 
+}
+@media (max-width: 860px){
+    .serviceText{
+        margin-left: 0;
+        font-size: 20px;
+    }
+    .meritCardholder{
+        height: auto;
+        margin: 40px 0 0;
+        padding: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }

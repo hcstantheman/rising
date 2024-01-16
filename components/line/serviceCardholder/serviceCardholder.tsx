@@ -1,16 +1,21 @@
-// MyComponent.tsx
 import React from 'react';
 import Image from 'next/image';
-import styles from './serviceCardholder.module.scss'; // Import your Sass module
+import styles from './serviceCardholder.module.scss';
 
 interface MyComponentProps {
-  text: string;
+  step: string;
+  bgUrl: string;
+  width: number;
+  height: number;
 }
 
-const ServiceCardholder: React.FC<MyComponentProps> = ({ text}) => {
+const ServiceCardholder: React.FC<MyComponentProps> = ({ step, bgUrl, width, height}) => {
   return (
     <div className={styles.container}>
-      <p className={styles.text}>{text}</p>
+      <p className={styles.step}>{step}</p>
+      <Image src={bgUrl} alt={'bg'}
+             width={width} height={height}
+             className={styles.backgroundIcon}/>
     </div>
   );
 };
