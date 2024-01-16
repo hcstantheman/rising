@@ -15,14 +15,14 @@ const Interview: React.FC = () => {
         <div className={styles.intro}>
           <Intro/>
         </div>
-        <div className={styles.content}>
-          <Content/>
-        </div>
+        {/*<div className={styles.content}>*/}
+        {/*  <Content/>*/}
+        {/*</div>*/}
       </div>
-      <div className={styles.discussion}>
-        <Discussion/>
-      </div>
-      <Charge/>
+      {/*<div className={styles.discussion}>*/}
+      {/*  <Discussion/>*/}
+      {/*</div>*/}
+      {/*<Charge/>*/}
       <Footer/>
     </div>
   )

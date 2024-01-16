@@ -18,17 +18,16 @@
     letter-spacing: 3.2px;
 }
 
-.titleBox{
-    .title {
-        @extend .font;
-        text-shadow: 2px 3px 2px rgba(131, 178, 212, 0.65);
-        background: linear-gradient(93deg, #00B0FF 0.8%, #3354C9 99.17%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-align: center;
-    }
+.title {
+    @extend .font;
+    text-shadow: 2px 3px 2px rgba(131, 178, 212, 0.65);
+    background: linear-gradient(93deg, #00B0FF 0.8%, #3354C9 99.17%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
 }
+
 
 .contentBox{
     display: flex;
@@ -43,5 +42,25 @@
     .content{
         @extend .contentFont;
         max-width: 450px;
+    }
+}
+
+@media (max-width: 860px) {
+    .titleBox{
+        width: 100%;
+        .title{
+            font-size: 20px;
+            height: auto;
+        }
+    }
+    .contentBox{
+        flex-direction: column;
+        gap: 40px;
+        .img{
+            width: 100%;
+        }
+        .content{
+            max-width: 100%;
+        }
     }
 }

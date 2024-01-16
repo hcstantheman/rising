@@ -7,3 +7,12 @@
 .discussion{
     margin-top: 120px;
 }
+
+@media (max-width: 860px) {
+    .container{
+        margin: 0 20px;
+    }
+    .intro{
+        margin: 50px 0;
+    }
+}
