@@ -20,13 +20,23 @@
     transform: translate(-6%);
     color: #5D6865;
 }
+.title{
+    @extend .box, .pfont;
+    font-size: 28px;
+    font-family: YuGothicBold;
+}
+.content{
+    @extend .box, .pfont;
+    font-size: 20px;
+    line-height: 30px; /* 150% */
+    letter-spacing: 4px;
+    top: 225px;
+}
 
 .serviceText{
     @extend .font;
     margin-left:24px;
-    margin-bottom: -5px;
 }
-
 .meritCardholder{
     margin: 56px auto 104px;
     padding: 24px;
@@ -34,90 +44,23 @@
     height: 838px;
     background: #FBDF97;
     display: grid;
-    grid-template-columns: repeat(2, 592px); // Two columns, each 592px wide
-    grid-template-rows: repeat(2, 383px); // Two rows, each 383px high
-    gap: 24px 20px; // 24px vertical gap, 20px horizontal gap
-    justify-content: center; // Center the grid horizontally if there's extra space
-    align-content: center; // Center the grid vertically if there's extra space
-    .step1 {
-        .mainBox{
-            @extend .box;
-            padding-top: 123px;
-            p {
-                @extend .pfont;
-                font-size: 28px;
-                font-family: YuGothicBold;
-            }
-        }
-        .subBox{
-            @extend .box;
-            padding-top: 225px;
-
-            p {
-                @extend .pfont;
-                font-size: 20px;
-                line-height: 30px; /* 150% */
-                letter-spacing: 4px;
-            }
-        }
-    }
-    .step2 {
-        .mainBox{
-            @extend .box;
-            padding-top: 123px;
-            left: 100px;
-            p {
-                @extend .pfont;
-                font-size: 28px;
-                font-family: YuGothicBold;
-            }
-        }
-        .subBox{
-            @extend .box;
-            padding-top: 225px;
-            left: 158px;
-            p {
-                @extend .pfont;
-                font-size: 20px;
-                line-height: 30px;
-                letter-spacing: 4px;
-            }
-        }
-    }
+    grid-template-columns: repeat(2, 592px);
+    grid-template-rows: repeat(2, 383px);
+    gap: 24px 20px;
+    justify-content: center;
+    align-content: center;
+    .step1 { .title{ top: 123px } }
+    .step2 { .title{ top: 123px } }
     .step3 {
-        .mainBox{
-            @extend .box;
-            padding-top: 103px;
-            p {
-                @extend .pfont;
-                font-family: YuGothicBold;
-                font-size: 28px;
-            }
-        }
-        .subBox{
-            @extend .box;
-            padding-top: 257px;
-
-            p {
-                @extend .pfont;
-                font-size: 20px;
-                line-height: 30px; /* 150% */
-                letter-spacing: 4px;
-            }
-        }
+        .title{ top: 103px }
+        .content{ top: 257px }
     }
     .step4 {
-        .mainBox{
-            @extend .box;
+        .title{
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             min-width: 470px;
-            p {
-                @extend .pfont;
-                font-family: YuGothicBold;
-                font-size: 28px;
-            }
         }
     }
     .step1, .step2, .step3, .step4{
