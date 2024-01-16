@@ -15,6 +15,7 @@
     background-color: #fff; /* or any color you prefer */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     transition: right 0.5s ease;
+    z-index: 100;
 }
 .title{
     margin-top:33px;
@@ -35,16 +36,14 @@
     font-size: 18px;
     letter-spacing: 3.6px;
     overflow: hidden;
-    z-index: 10;
+    z-index: 200;
 }
 
 .optionWrapper {
     position: relative;
     height: 32px; /* Height of your text */
     line-height: 32px; /* Aligns text vertically */
-    z-index: 10;
-
-
+    z-index: 200;
 }
 
 
