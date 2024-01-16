@@ -29,7 +29,6 @@ const Price: React.FC = () => {
       <div className={styles.noteContainer}>
         <PriceNote/>
       </div>
-
     </div>
   )
 }
