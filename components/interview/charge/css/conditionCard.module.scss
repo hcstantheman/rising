@@ -18,7 +18,21 @@
     font-family: YuGothicBold;
     font-size: 24px;
     font-style: normal;
-    line-height: 30px; /* 125% */
+    line-height: 30px;
     letter-spacing: 4.8px;
+}
 
+@media (max-width: 860px) {
+    .outerContainer {
+        height: auto;
+        width: 80%;
+    }
+    .innerContainer{
+        padding: 16px 10px;
+    }
+    .text{
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 4px;
+    }
 }

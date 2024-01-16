@@ -22,7 +22,7 @@ const Interview: React.FC = () => {
       <div className={styles.discussion}>
         <Discussion/>
       </div>
-      {/*<Charge/>*/}
+      <Charge/>
       <Footer/>
     </div>
   )
