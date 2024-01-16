@@ -22,9 +22,9 @@ const Line: React.FC = () => {
       <div className={styles.merit}>
         <Merit/>
       </div>
-      <div className={styles.service}>
-        <Service/>
-      </div>
+      {/*<div className={styles.service}>*/}
+      {/*  <Service/>*/}
+      {/*</div>*/}
       <Footer />
     </div>
   );
