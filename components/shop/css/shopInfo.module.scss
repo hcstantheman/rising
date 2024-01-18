@@ -85,12 +85,29 @@
 }
 @media (max-width: 768px) { // Adjust this breakpoint as needed
     .infoContainer {
-        flex-direction: column; // Stack the children vertically on smaller screens
-        padding: 25px; // Adjust padding for smaller screens
+        flex-direction: column;
+        padding: 25px;
     }
 
     .leftContainer,
     .rightContainer {
         width: 100%;
+    }
+    .leftContainer{
+        .phone, .landline{
+            padding-bottom: 20px;
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+    .rightContainer{
+        .upperContainer{
+            height: auto;
+        }
+        .firstLine, .secondLine{
+            gap: 5px;
+
+        }
     }
 }

@@ -15,3 +15,8 @@
 .blogContainer{
     padding: 135px 94px 35px;
 }
+@media (max-width: 860px){
+    .titleImage {
+        height: auto;
+    }
+}

@@ -16,8 +16,8 @@ const Shop: React.FC = () => {
         className={styles.titleImage}/>
       <div className={styles.infoContainer}><ShopInfo/></div>
       <div className={styles.receptionContainer}><Reception/></div>
-      <div className={styles.cardContainer}><ShopCardholder/></div>
-      <div className={styles.blogContainer}><ShopBlog/></div>
+      {/*<div className={styles.cardContainer}><ShopCardholder/></div>*/}
+      {/*<div className={styles.blogContainer}><ShopBlog/></div>*/}
       <Footer/>
     </div>
   )
