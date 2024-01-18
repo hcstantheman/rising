@@ -17,15 +17,15 @@ const Making: React.FC = () => {
               <p>日本全国へ、そして世界へ。すべてはその土地柄に合わせた地域密着から始まります。</p>
             </div>
           </div>
-          {/*<div className={styles.rowsContainer}>*/}
-          {/*  <MakingRowOne/>*/}
-          {/*  <div className={styles.secondRow}>*/}
-          {/*    <MakingRowTwo/>*/}
-          {/*  </div>*/}
-          {/*  <div className={styles.thirdRow}>*/}
-          {/*    <MakingRowThree/>*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+          <div className={styles.rowsContainer}>
+            <MakingRowOne/>
+            <div className={styles.secondRow}>
+              <MakingRowTwo/>
+            </div>
+            <div className={styles.thirdRow}>
+              <MakingRowThree/>
+            </div>
+          </div>
         </div>
       <Footer />
     </div>

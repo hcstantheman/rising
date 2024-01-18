@@ -1,3 +1,20 @@
+.font{
+    font-family: YuGothicBold, serif;
+    font-size: 50px;
+    line-height: normal;
+    letter-spacing: 10px;
+}
+
+.text{
+    font-family: YuGothic, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 3.2px;
+    text-align: justify;
+}
+
 .rowContainer{
     width: 100%;
     display: flex;
@@ -9,6 +26,7 @@
             position: relative;
         }
         .backgroundText {
+            @extend .font;
             color: transparent;
             background: linear-gradient(
                             90deg,
@@ -16,10 +34,6 @@
                             rgba(87, 255, 154, 0.30) 46.56%,
                             rgba(113, 209, 252, 0.30) 101.39%
             );
-            font-family: YuGothicBold, serif;
-            font-size: 50px;
-            line-height: normal;
-            letter-spacing: 10px;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -30,11 +44,9 @@
             left: -9px;
             top: 190px;
             color: #5D6865;
-            font-family: YuGothicBold, serif;
+            @extend .font;
             font-size: 30px;
             font-style: normal;
-            font-weight: 700;
-            line-height: normal;
             letter-spacing: 6px;
         }
         .additionalText{
@@ -42,13 +54,27 @@
             margin-top: 40px;
             margin-left: -9px;
             color: #5D6865;
-            text-align: justify;
-            font-family: YuGothic, serif;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 30px;
-            letter-spacing: 3.2px;
+            @extend .text;
+        }
+    }
+}
+
+@media (max-width: 860px){
+    .rowContainer{
+        flex-direction: column;
+        .rightText{
+            margin: 20px;
+            .backgroundText{
+                font-size: 30px;
+            }
+            .foregroundText{
+                font-size: 20px;
+                top: 120px;
+                left: 20px;
+            }
+            .additionalText{
+                margin-left: 0;
+            }
         }
     }
 }

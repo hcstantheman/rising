@@ -52,3 +52,28 @@
         }
     }
 }
+@media (max-width: 860px){
+    .rowContainer {
+        flex-direction: column;
+        row-gap: 0;
+        .rightText{
+            margin-top: 100px;
+            margin-left: 0;
+            .backgroundText{
+                margin: 0;
+                font-size: 30px;
+                letter-spacing: 4px;
+            }
+            .foregroundText{
+                top: 80px;
+                left: 20px;
+                font-size: 20px;
+            }
+            .additionalText{
+                padding: 20px;
+                letter-spacing: 5px;
+            }
+        }
+    }
+
+}
