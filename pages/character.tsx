@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 import styles from './css/character.module.scss';
-import CharCard from "../components/character/charCard";
 import CharContent from "../components/character/charContent";
 
 const Character: React.FC = () => {

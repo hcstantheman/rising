@@ -77,9 +77,9 @@ const Post = () => {
           <p key={index}>{paragraph}</p>
         ))}
         <div className={styles.buttonContainer}>
-          {post.prevPostId && <StyleButton text={'＜　前の記事へ'} to={`/blog/${post.prevPostId}`}/>}
+          {post.nextPostId && <StyleButton text={'＜　前の記事へ'} to={`/blog/${post.nextPostId}`}/>}
           {mobile ? null : <StyleButton text={'一覧へ戻る'} to={'/blog'}/> }
-          {post.nextPostId && <StyleButton text={'次の記事へ　＞'} to={`/blog/${post.nextPostId}`}/>}
+          {post.prevPostId && <StyleButton text={'次の記事へ　＞'} to={`/blog/${post.prevPostId}`}/>}
         </div>
       </div>
       <Footer/>
