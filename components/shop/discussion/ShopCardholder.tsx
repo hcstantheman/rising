@@ -39,9 +39,11 @@ const ShopCardholder: React.FC = () => {
             </p>
           </div>
         </div>
-        <DoublePhoto
-          imageUrl={'/img/masamune-3.png'}
-        />
+        <div className={styles.photo}>
+          <DoublePhoto
+            imageUrl={'/img/masamune-3.png'}
+          />
+        </div>
       </div>
       <div className={styles.firstContainer}>
         <DoublePhoto
