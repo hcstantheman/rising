@@ -26,6 +26,9 @@
     justify-content: right;
 }
 
-.rightAlignedButton {
-    margin-left: auto;  // Pushes the button to the right
+@media (max-width: 860px) {
+    .postContainer{
+        flex-direction: column;
+        align-items: center;
+    }
 }

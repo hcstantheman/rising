@@ -50,3 +50,15 @@
   max-width: 292px;
   max-height: 232px;
 }
+
+@media (max-width: 860px){
+    .cardContainer{
+        width: calc(100% - 44px - 44px);
+        height: calc(400px - 28px - 37px);
+        padding: 28px 44px 37px;
+      box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.15);
+      .cardTitle{
+        max-width: 100%;
+        }
+    }
+}
